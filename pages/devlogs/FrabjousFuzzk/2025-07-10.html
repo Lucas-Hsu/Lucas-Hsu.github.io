@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devlog #1</title>
+    <link href="/styles/main-style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+
+  <body class="background" style="background-image: url('/images/backgrounds/apple_park_vincinity.png');">
+
+    <div class="header blur">
+      <a href="/" class="header-link"> Lucas Hsu </a>
+      <a href="/home.html" class="header-link"> Home </a>
+      <a href="/pages/devlogs/" class="header-link"> Devlogs </a>
+      <a href="/pages/devlogs/FrabjousFuzzk/" class="header-link"> Frabjous Fuzzk </a>
+    </div>
+    
+    <div class="content blurier"> 
+
+        <div style="margin-top: 1em;"></div>
+        <div style="display: flex; align-items: center;">
+          <div id="musicImg" class="circle-container small reactive" style="border: 10px solid #b57cbd;">
+            <img class="small circle" src="/images/no-copyright/deus-ex.png">
+          </div>
+          <h1 style="flex:1; padding-left: 1em;"><a href="/pages/devlogs/FrabjousFuzzk/2025-07-10.html">Frabjous Fuzzk - Devlog #1</a></h1>
+        </div>
+        <div style="height: 0.5em;"></div>
+
+        <h2><a id="Background" href="#Background">Background</a></h2>
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> I've made a few games before, most of which were simple and fun. 
+          For example, SprayGame is all about spraying monkeys with water, and there are only two enemy types. 
+          Similarly, PUSH was a first person shooter with a melee kick and a ranged autoaim gun attack, and your goal was
+          just to push the cyan cube back to the top of the ramp while avoiding enemies since you only have 1 HP.
+          However, Parody 1999 was a bit more complex, as I was making a parody of a card game, which had complex character 
+          and skill rules. 
+          <br><br>
+          <span class="tabspace"></span> I don't actually understand why those games were fun, and why I ran out of interest
+          in playing them after a while. So, I looked online, and stumbled across these two types of categorizations: 
+        </p>
+        <ul class="proportionalFont" style="margin-top: -0.4em">
+          <li>Adam Millard's <a target="_blank" class="external" href="https://www.youtube.com/watch?v=tVJUGoSSuzE">"6 Types of Difficulty"</a></li>
+          and
+          <li>Mark Leblanc's <a target="_blank" href="http://www.algorithmancy.8kindsoffun.com">Eight Kinds of Fun</a></li>
+        </ul>
+        <p class="proportionalFont" style="margin-top: -0.4em"> 
+          <span class="tabspace"></span> While I'm not yet sure if they are fully correct, the categories provide a good reference
+          when thinking about how to design a fun game. Ideally we would want to contain multiple types of fun and difficulty to make
+          sure more players can enjoy the game, and that they won't get tired of the same old thing repeating too often. 
+          <br><br>
+          <span class="tabspace"></span> While I'm not yet sure if they are fully correct, the categories provide a good reference
+          when thinking about how to design a fun game. Ideally we would want to contain multiple types of fun and difficulty to make
+          sure more players can enjoy the game, and that they won't get tired of the same old thing repeating too often.
+        </p>
+        <img class="medium-y" src="/images/no-copyright/6TypesOfDifficulty.png"/>
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> Most difficulty in games can be put into one of these categories, 
+          but they could also fit in multiple. I'm choosing Precision, Computation, and Navigation for the game I will be making. 
+          I feel like some visual organization or mathematical computation goes along well with timed, precise actions that the player will have to perform. 
+          At the same time, navigation can provide as the alternative gameplay loop in between those challenges.
+        </p> 
+        <img class="medium-y" src="/images/no-copyright/8KindsOfFun.png"/>
+        <p class="proportionalFont">
+          <span class="tabspace"></span> Mark Leblanc's 8 Kinds of Fun is a more broad categorization, summarizing the main reasons why people play 
+          video games. This will greatly affect the themes and intended audience for the game. Also, certain categories like Sensation or Narrative 
+          are difficult for me to make as I have less skills in visual arts and writing stories. Fellowship is difficult too, as I am unfamiliar with multiplayer code. 
+          I'm still going to focus on Challenge because those are the types of games I would like to play. Of course, I get bored of difficult games
+          very quickly if I don't win, so I will also combine it with Submission by adding easy and calm gameplay sections. 
+        </p>
+        <h2><a id="Ideas" href="#Ideas">Basic Ideas</a></h2>
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> As I discussed above, the game will have a basic gameplay loop like this:
+        </p>
+        <img class="medium-y" src="/images/GameplayLoop-1.png"/>
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> At this point, I think most of the games I've played were like this, which means it's a good idea. It's just that I 
+          haven't really made a game like this before. Undergrowth was exactly like this, but the scope of that game was too large, and it went unfinished. 
+          So another thing to consider is how complex the game should be. Since I'm making it by myself, within a duration of 7 days 
+          (spent on development and polishing) at most, I must make it very simple.
+          <br><br>
+          <span class="tabspace"></span> For the next devlog, I will discuss the game's development engine, art style, themes, gameplay details, and exhaustive feature list, along with the development schedule.
+        </p>
+
+        <div class="footer">
+          <a style="flex: 1;" href=""> PREV </a>
+          <span style="width: 100%;""></span>
+          <a style="flex: 1; margin-right: 2em;" href="/pages/devlogs/FrabjousFuzzk/2025-07-12.html"> NEXT </a>
+        </div>
+
+    </div>
+
+    <audio id="music" src="/music/no-copyright/paris-conversation.mp3" loop></audio>
+    <script src="/scripts/looping-bg-music.js"></script>
+
+  </body>
+
+</html>

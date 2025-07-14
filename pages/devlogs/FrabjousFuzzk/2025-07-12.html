@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devlog #2</title>
+    <link href="/styles/main-style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+
+  <body class="background" style="background-image: url('/images/backgrounds/apple_park_vincinity.png');">
+
+    <div class="header blur">
+      <a href="/" class="header-link"> Lucas Hsu </a>
+      <a href="/home.html" class="header-link"> Home </a>
+      <a href="/pages/devlogs/" class="header-link"> Devlogs </a>
+      <a href="/pages/devlogs/FrabjousFuzzk/" class="header-link"> Frabjous Fuzzk </a>
+    </div>
+    
+    <div class="content blurier"> 
+
+        <div style="margin-top: 1em;"></div>
+        <div style="display: flex; align-items: center;">
+          <div id="musicImg" class="circle-container small reactive" style="border: 10px solid #b57cbd;">
+            <img class="small circle" src="/images/no-copyright/AliceII.png">
+          </div>
+          <h1 style="flex:1; padding-left: 1em;"><a href="/pages/devlogs/FrabjousFuzzk/2025-07-12.html" class="center-content".html">Frabjous Fuzzk - Devlog #2</a></h1>
+        </div>
+        <div style="height: 0.5em;"></div>
+
+        <h2><a id="Theme" href="#Theme">Game Theme</a></h2>
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> I'm going to design the game from a top down approach. This will allow me to
+          constantly keep track of my goals and the direction I want to design my game towards. All the features
+          I add into the game should adhere to the core experience I want the game to provide.
+          <br><br>
+          <span class="tabspace"></span> Last night I had a dream about a blob creature with a smiley face
+          bobbing up and down like it's dancing, but suddenly attacking a bird flying nearby. It might be a
+          coincidence, but that's exactly what I want for my game, as it fits into the difficulty and fun design 
+          I set down a few days ago. 
+          <br><br>
+          <span class="tabspace"></span> The core experience of the game will be:
+          <br>
+          <span class="tabspace"></span> <i><b>"You are a playful blob creature that enjoys living with your brothers
+          on the grass plain. But occasionally, when you are hungry, you take the role of a violent and ruthless predator,
+          hunting down your prey."</i></b>
+          <br><br>
+          <span class="tabspace"></span> The new gameplay loop flowchart is shown in the diagram below. The high-intensity gameplay loop
+          still obeys the Challenge kind of fun, but the low-intensity loop does not entirely fit into the Submission kind of fun.
+          In a way, I mixed Fellowship into the game. And this is actually very good, as the reason why I wanted to include a mix of 
+          difficult and easy gameplay was to make sure players don't give up too soon. Socializing with NPCs within the game would be a
+          good way of keeping the player engaged even if they failed to capture prey that day. 
+        </p>
+        <img class="medium-y" src="/images/GameplayLoop-Themed.png"/>
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> Precise, timed controls and computation challenges will be neccessary to
+          successfully hunt and kill a prey. For example, maintaining a safe distance away from prey to prevent from 
+          alerting them, throwing rocks along a correct trajectory to stun the prey, and closing in for a kill. 
+          Thinking about it right now, I think it will add another layer of difficulty if the prey has a hard shell 
+          that requires the player to find weakpoints and inject toxins into the prey to kill it before it runs away.
+          On the other hand, navigational skills are neccessary for locating the brother blobs and returning home to 
+          sleep for the night.
+        </p>
+
+        <h2><a id="Name" href="#Name">Game Name</a></h2>
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> Now that we have the core experience of the game set down, I can come up with a 
+          name that encompasses that idea, so that players will be able to see what the game is about right from the name.
+          <br><br>
+          <span class="tabspace"></span> If you didn't notice already, this devlog's background music is from an Alice through the Looking
+          Glass film. I like how Lewis Caroll creates imaginary words by combining two different adjectives. The Jabberwocky poem 
+          especially creates a playful and childish tone while also depicting violence, which fits my game perfectly.
+          <br><br>
+          <span class="tabspace"></span> The player character is fluffy, fuzzy, cute, but also spiky, quick, and dangerous. Maybe, a kitten and a spider.  
+          For me, 'K' is a very sharp letter, so I just put that onto a word like fuzzy, and I get: <b>"Fuzzk"</b>. I think it's pretty good, because
+          when you read it, you expect it to say fuzzy, like you would expect the player character to be fuzzy and cute like usual, but it is unexpectedly 
+          sharp and dangerous.
+        </p>
+        <h3 style="margin: -0.2em;">Frabjous Fuzzk</h3>
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> I think that sounds very nice and is pretty unique. Better than just naming it "PlayHunt Game" like 
+          I would if I used my old game naming convention. >v<
+          <br><br>
+        </p>
+
+        <h2><a id="Tools" href="#Tools">Game Tools</a></h2>
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> <b>Game Engine: </b> I'm going to use the Godot Engine for this game. I've used Godot before, and felt 
+          that it was fun to use, compared to Unity which felt very serious. Not only that, there are several features that Godot provides better than Unity,
+          such as the intuitive node and scene based system, or making 2D-only games instead of 2D as an overlay on a 3D world. More importantly 
+          GDScript is an interpreted language with optional static typing, which would make it quick and easy for me to code and debug the game.
+          Godot has an integrated code editor, so I will be using that.
+          <br><br>
+          <span class="tabspace"></span> <b>Art Program: </b> I'm not skilled at drawing, so I'm just going to choose an app that makes it easy 
+            to create animations for the game. Pencil2D is free and has all the features I need for drawing simple art and animations with no shading.
+          <br><br>
+          <span class="tabspace"></span> <b>DAW: </b> I'm going to use Logic Pro because I've always used it, and it has lots of features. Music is the 
+          lowest priority though. I'm probably just going to add some ambient sound effects.
+        </p>
+      
+        <h2><a id="Art" href="#Art">Game Art</a></h2>
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> Drawing art is always exciting! I'm going to make it look cute because everything I draw inevitably looks funny.
+        </p>
+        <div style="display: flex; flex-direction: row;">
+          <div style="display: flex; flex-direction: column; place-items: center;">
+            <img class="medium-y" src="/images/fuzzk-green-neutral.png"/>
+            <p>Fuzzk Normally</p>
+          </div>
+          <div style="display: flex; flex-direction: column; place-items: center;">
+            <img class="medium-y" src="/images/fuzzk-green-hunt.png"/>
+            <p>Fuzzk Hunting</p>
+          </div>
+        </div>
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> Probably some simple one or two frame animations for actions will be enough. I think the other Fuzzks can be the other 6 colors of the rainbow. 
+          As for the game as a whole, in order to not have to consider perspective distortions when drawing, I want the perspective to look like Undergrowth (or SprayGame!), where the y and z 
+          axis are on the same axis, and have the same proportions:
+        </p>
+
+        <div style="display: flex; flex-direction: row;">
+          <div style="display: flex; flex-direction: column; place-items: center">
+            <img class="small-y" src="/images/undergrowth_farm.jpeg"/>
+            <p>Undergrowth</p>
+          </div>
+          <span class="tabspace"></span>
+          <div style="display: flex; flex-direction: column; place-items: center">
+            <img class="small-y" src="/images/spray_game.png"/>
+            <p>SprayGame</p>
+          </div>
+        </div>
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> I think the low quality of my art will be a drawback for people seeking to enjoy the game,
+          so I might ask a real artist to redraw all the art if my game is popular. However, my focus right now is coding the game
+          and making it a reality.
+          <br><br>
+          <span class="tabspace"></span> The same goes for music. I'm not good at that, so the game might sound boring. It all depends on if 
+          I have time to do it. At the very least, having some sound effects from the environment would make the game feel calm and natural.
+        </p>
+        
+        <h2><a id="List" href="#List">Success Criteria</a></h2>
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> I used to just add features whenever I wanted as I programmed the game, but that made development 
+          time drag on way past the day I thought it would be done, since I always wanted to add new things. The list I'm making will be
+          how I make sure I have compeleted everything I wanted to do and am ready to release a version 1 of the game. I can make 
+          improvements and additions after I release it based on feedback, of course.
+          <br><br>
+          <span class="tabspace"></span> To motivate the player and give the gameplay a sense of urgency, I will add a revenge story. Some 
+          scary monster ate the Red Fuzzk, your best friend, so now you have to call the other Fuzzks to fight back and recover Red Fuzzk
+          from scary monster's stomach. You have to eat lots of Shells to level up so that you are strong enough to beat the monster.
+        </p>
+
+        <ul class="proportionalFont" style="text-align: left;">
+          <li> Player actions (Overworld)
+            <ol> 
+              <li>Move around in 8 directions (because keyboard)</li>
+              <li>Kick in the direction of cursor, knocking items away</li>
+              <li>Dance in 4 directions when not moving</li>
+              <li>Interact with other Fuzzks to recruit them if you have enough stamina to dance with them</li>
+              <li>Pick up items and throw them to the direction of cursor</li>
+              <li>Interact with stunned Shells to devour them (enter hunt mode)</li>
+              <li>Leveling up increases max stamina</li>
+              <li>Sleep to replenish stamina</li>
+            </ol>
+          </li>
+          <li> NPCs
+            <ol> 
+              <li>6 Other Fuzzks (ur brothers), each a different color of the rainbow</li>
+              <li>Shells, which Fuzzks prey on, but have hard shells. </li>
+              <li>Mosquitoes that fly around and sting you unless you kick them.</li>
+              <li>Scary Monster in the cave.</li>
+            </ol>
+          </li>
+          <li> Player actions (Hunt Mode)
+            <ol> 
+              <li> Sweep the enemy's body for weak points </li>
+              <li> Insert each of your feet into into the weak points </li>
+              <li> Inject venom, which is a minigame like Space Invaders, but in the shape of living cells</li>
+              <li> If the enemy does not die, you exit hunt mode and have to kick the enemy to stun them before they escape </li>
+              <li> You can flee by not kicking the enemy and running out of range of the enemy</li>
+            </ol>
+          </li>
+          <li> Game Objectives
+            <ol> 
+              <li> If you run out of stamina, you lose some max stamina and respawn, which means some of the Fuzzks might leave you until you beat them at dancing again </li>
+              <li> You need all 5 Fuzzks on your team to make the scary monster bossfight not ridiculously difficult.</li>
+              <li> If you beat the scary monster, you win. </li>
+              <li> After that, you can just run around doing whatever you want with you 6 Fuzzk brothers. </li>
+            </ol>
+          </li>  
+          <li> Feature Checklist 
+            <ol> 
+              <li> Stamina system </li>
+              <li> Persistent world map of locations of Fuzzks and Scary Monster </li>
+              <li> Shell and Mosquito spawning/despawning system </li>
+              <li> Random rocks spawning </li>
+            </ol>
+          </li>
+          <li> Bonus (Not necessary and complicated to implement, but would be fun)
+            <ol> 
+              <li> Grass and flowers </li>
+              <li> Non-essential sound effects and music </li>
+              <li> Particle effects, wind, and other graphical details </li>
+              <li> Rivers and jumping across rivers </li>
+              <li> Day and nights / time system, so that the world feels more alive. Prey is asleep at night, but visibility is lower </li>
+              <li> Speech system for Fuzzks, so they can have different personalities </li>
+            </ol>
+          </li>  
+        </ul>
+
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> All of the features I included above fit into either the categor of fun experience of living as a cute creature,
+          or the category of hunting animals with precise controls and complex steps. However, I <i>am</i> suprised at how much stuff I have to implement.
+          Therefore, my development plan will have to prioritize the most important things first.
+        </p>
+
+        <table border="1" cellpadding="8" cellspacing="0">
+          <tr>
+            <th>Day #</th>
+            <th>Development Content</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Player-only Overworld actions</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>NPCs spawning and interactions, (no enemy AI)</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>World map plan and add into game</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Hunt mode (excluding Space Invaders)</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Space invaders and Fuzzk Dancing Minigames</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Enemy and Fuzzk AI</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Bossfight, Win criteria and saving and loading</td>
+          </tr>
+        </table>
+
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> Everything is going to be minimalistic to save time. No animations. No sound effects.
+          Those will all be added once the core game is completed. If the game loop itself is not fun, then adding
+          polish will only hide its flaws. Once I release the game, I can slowly add QOL features. 
+        </p>
+
+        <div class="footer">
+          <a style="flex: 1;" href="/pages/devlogs/FrabjousFuzzk/2025-07-10.html"> PREV </a>
+          <span style="width: 100%;""></span>
+          <a style="flex: 1; margin-right: 2em;" href="/pages/devlogs/FrabjousFuzzk/2025-07-13.html"> NEXT </a>
+        </div>
+        
+    </div>
+
+    <audio id="music" src="/music/no-copyright/alice-theme-i.mp3" loop></audio>
+    <script src="/scripts/looping-bg-music.js"></script>
+
+  </body>
+
+</html>

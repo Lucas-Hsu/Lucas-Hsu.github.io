@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devlog #4</title>
+    <link href="/styles/main-style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+
+  <body class="background" style="background-image: url('/images/backgrounds/apple_park_vincinity.png');">
+
+    <div class="header blur">
+      <a href="/" class="header-link"> Lucas Hsu </a>
+      <a href="/home.html" class="header-link"> Home </a>
+      <a href="/pages/devlogs/" class="header-link"> Devlogs </a>
+      <a href="/pages/devlogs/FrabjousFuzzk/" class="header-link"> Frabjous Fuzzk </a>
+    </div>
+    
+    <div class="content blurier"> 
+      <div style="margin-top: 1em;"></div>
+      <div style="display: flex; align-items: center;">
+        <div id="musicImg" class="circle-container small reactive" style="border: 10px solid #b57cbd;">
+          <img class="small circle" src="/images/no-copyright/pikuniku.png">
+        </div>
+        <h1 style="flex:1; padding-left: 1em;"><a href="/pages/devlogs/FrabjousFuzzk/2025-07-14.html" class="center-content".html">Frabjous Fuzzk - Devlog #4</a></h1>
+      </div>
+      <div style="height: 0.5em;"></div>
+
+      <h2><a id="Day2" href="#Day2">Development Day 2</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> Today, I added NPCs and enemies. The spawning systems now work correctly, and you can interact with
+        NPCs and kill enemies. Finally, I also made it so that the world loops back on itself when you reach the edge.
+      </p>
+
+      <a target="_blank" href="https://files.catbox.moe/i992i6.mp4">View video of features implemented (8.6MB)</a>
+
+      <ul>
+        <li>
+          Player actions (Overworld)
+          <ul>
+            <li>
+              Interact with other Fuzzks to recruit them if you have enough stamina to dance with them
+            </li>
+            <li>
+              Interact with stunned Shells to devour them (enter hunt mode)
+            </li>
+          </ul>
+        </li>
+        <li>
+          NPCs
+          <ul>
+            <li>
+              6 Other Fuzzks (ur brothers), each a different color of the rainbow
+            </li>
+            <li>
+              Shells, which Fuzzks prey on, but have hard shells.
+            </li>
+            <li>
+              Mosquitoes that fly around and sting you unless you kick them.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Feature Checklist
+          <ul>
+            <li>
+              Shell and Mosquito spawning/despawning system
+            </li>
+            <li>
+              Random rocks spawning
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2><a id="Infinite" href="#Infinite"> Infinite Worlds Like Minecraft! (kinda) </a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> I made it so that when you reach the end of the world, you can keep going and end up at the other side of the world. 
+        I didn't plan it to be this way, however, I think this is a good choice. The reason is that it makes my small world feel bigger, as the player has freedom
+        to move in any direction they please for as long as they want, which gives them the illusion of an infinitely large world. This also has the advantage of 
+        having this shortcut to the other side of the world is that you don't have to travel the entire width of the world again. It basically works like 
+        Pacman, but in that game, the purpose of the shortcut is to help you escape being chased by the ghosts.
+        <br><br> 
+      </p>
+      <img class="medium-y" src="/images/infinite_looping_world.png"/>
+      <p>The world is connected on all sides.</p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> As you can see, I also painted different colors on the map to indicate different kinds of terrains. It makes it easier for the 
+        player to locate where they are in the world, and I'll be able to add memorable points of interests on the map later on. An auxiliary benefit is that the game now looks prettier.
+      </p>
+
+      <h2><a id="Pikuniku" href="#Pikuniku"> Reflection During Picnic Time </a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> My sister told me that the kicking looks like it came from the game Pikuniku that we played together last year. And she's right! 
+        I enjoyed kicking things in that game so much that I added it into my own game. I think the genius of the kick mechanic is in that it gives you a very immediate 
+        and forceful way to interact with the game world, which keeps you both entertained and immersed in the game world. That's why right now, kicking is the primary 
+        way of playing the game. You can kick rocks towards Shells to stun them, and you have to kick the mosquitoes (Toes) to kill them. 
+      </p>
+      <img class="medium-y" src="/images/pikuniku_kick_comparison.png"/>
+      <p>A comparison of The Kick between Pikuniku and my game</p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> However, one side-effect is that this game is now too focused on combat action, which takes away from the calm feeling I wanted for 
+        the overworld portion of the game. To balance this out, I need to add a new feature that focus on construction or creation rather than damage and destruction. It's 
+        tricky to make players want to do something less boring though. I find it difficult to incentivize slow and peaceful gameplay when fast-paced action in the game is equally 
+        well-made. I thought of two solutions, both inspired by gameplay in Pikuniku. 
+        <br><br> 
+        <span class="tabspace"></span> First of all, inspired by the "draw a face for the strawman" part in Pikuniku, the player could be given the ability to draw, using the silk that they spin 
+        (since a Fuzzk is kind of like a spider, I think maybe they can do that.) This allows players to exercise their creativity. Moreover, it can help players mark locations 
+        and draw paths for them to follow back later on.  
+        <br><br> 
+        <span class="tabspace"></span> The other idea is to add a planting system into the game, inspired by the flower vase hat in Pikuniku that plants flowers. This will make players actively seek out the river in the game for water, and 
+        plant flowers. The flowers could be required by the other Fuzzks before you can recruit them, thereby providing concrete incentive for players to take part in the planting.
+        The players can then plant the extra flowers anywhere they want, so they can decorate the world, and maybe their homes if I ever have time to draw a house sprite for each Fuzzk.
+      </p>
+      <img class="x-large-y" src="/images/day2_screenshot_bite.png"/>
+      <p>Development Day 2: Cyan Fuzzk preparing to eat a Shell / <br> A swarm of Toes in the distance </p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> I still have to complete the rest of my plan before I decide if I should add these things. Because, maybe, the added minigames will provide a 
+        good mix of gamplay and reduce the need for so much combat in the overworld. I could also flesh out the dance system to include 8 directions, and make each dance move create 
+        a different sound, so that it in a way is also a singing system. Tomorrow, I will work more on the world map and add interesting locations to it. 
+      </p>
+
+      <div class="footer">
+        <a style="flex: 1;" href="/pages/devlogs/FrabjousFuzzk/2025-07-13.html"> PREV </a>
+        <span style="width: 100%;""></span>
+        <a style="flex: 1; margin-right: 2em;" href="/pages/devlogs/FrabjousFuzzk/2025-07-15.html"> NEXT </a>
+      </div>
+    </div>
+
+    <audio id="music" src="/music/no-copyright/the-mountain-village.mp3" loop></audio>
+    <script src="/scripts/looping-bg-music.js"></script>
+
+  </body>
+
+</html>

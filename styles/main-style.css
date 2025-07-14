@@ -1,0 +1,277 @@
+/* Fonts */
+@font-face {
+  font-family: 'Legible';
+  src: url('/fonts/Lucaslegiblefont-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Timez';
+  src: url('/fonts/Timesnewlucas-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Legible', Times, serif;
+  font-size: x-large;
+}
+
+p {
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+a:link {
+  color: rgb(0, 76, 106);
+}
+a:visited {
+  color: rgb(0, 76, 106);
+}
+a:hover {
+  color: white;
+  text-shadow:  0px 0px 4.48em magenta,
+                0px 0px 2.24em magenta,
+                0px 0px 2.24em cyan,
+                0px 0px 1.12em cyan,
+                0px 0px 0.56em rgb(173, 255, 255),
+                0px 0px 0.28em rgb(181, 253, 253);
+}
+a[target="_blank"] {
+  color: rgb(106, 0, 90);
+}
+a[target="_blank"]:visited {
+  color: rgb(106, 0, 90);
+}
+a[target="_blank"]:hover {
+  color: white;
+  text-shadow:  0px 0px 4.48em greenyellow,
+                0px 0px 2.24em greenyellow,
+                0px 0px 2.24em cyan,
+                0px 0px 1.12em cyan,
+                0px 0px 0.56em rgb(173, 255, 255),
+                0px 0px 0.28em rgb(181, 253, 253);
+}
+
+ul {
+  text-align: left;
+}
+ol {
+  text-align: left;
+}
+
+
+
+.header {
+  width: 100%;
+  height: 3em;
+  background-color: rgba(0, 255, 225, 0.601);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+}
+.header a {
+  margin-left: 2em;
+}
+.header a:link {
+  color:white
+}
+.header a:visited {
+  color:white
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  place-items: center;
+  color: black;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 40em;
+  height: auto;
+  padding: 0em 5em;
+  box-sizing: border-box;
+}
+
+.footer {
+  border-radius: 1em;
+  width: 100%;
+  min-height: 2em;
+  max-height: 2em;
+  background-color: rgba(255, 156, 206, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 6em;
+  margin-bottom: 3em;
+}
+.footer a {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.footer a:link {
+  color:white
+}
+.footer a:visited {
+  color:white
+}
+
+.circle-container {
+  border: 10px solid #2c3e50;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.circle-container-loop {
+  border: 10px solid #b57cbd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.circle {
+  clip-path: circle(50%);
+  shape-outside: circle(45%);
+}
+
+.background {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+
+
+.reactive:hover {
+  filter: hue-rotate(10deg) contrast(90%) brightness(1.2) saturate(2);
+}
+
+.blur {
+  backdrop-filter: blur( 0.35em );
+  -webkit-backdrop-filter: blur( 0.35em );
+}
+.blurier {
+  backdrop-filter: blur( 0.7em );
+  -webkit-backdrop-filter: blur( 0.7em );
+}
+
+.white {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.round {
+  border-radius: 0.5em 0.5em 0.5em 0.5em;
+  padding: 0.5em;
+}
+
+.proportionalFont {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+}
+
+.center-content {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.x-large{
+  max-width: 16em;
+  max-height: 16em;
+  min-width: 16em;
+  min-height: 16em;
+}
+.x-large-y {
+  max-height: 16em;
+  min-height: 16em;
+}
+.large {
+  min-width: 12em;
+  max-width: 12em;
+  min-height: 12em;
+  max-height: 12em;
+}
+.large-y {
+  min-height: 12em;
+  max-height: 12em;
+}
+.medium {
+  min-width: 9em;
+  max-width: 9em;
+  min-height: 9em;
+  max-height: 9em;
+}
+.medium-y {
+  min-height: 9em;
+  max-height: 9em;
+}
+.small {
+  min-width: 6em;
+  max-width: 6em;
+  min-height: 6em;
+  max-height: 6em;
+}
+.small-y {
+  min-height: 6em;
+  max-height: 6em;
+}
+
+
+
+/* <span class="tabspace"></span> */
+.tabspace {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+
+
+.rotating-slow {
+  animation: spin 2s linear infinite;
+  box-shadow: 0px 0px 1.12em white, 0px 0px 1.12em white;
+}
+.rotating {
+  animation: spin 0.785s linear infinite;
+  box-shadow: 0px 0px 1.12em white, 0px 0px 1.12em white;
+}
+@keyframes spin {
+  from { transform: rotate(0deg) scale(1.05); }
+  to { transform: rotate(360deg) scale(1.05); }
+}
+.rotating-return {
+  animation:  returnToZero 0.25s ease-out forwards;
+}
+@keyframes returnToZero {
+  from { transform: rotate(360deg) scale(1); }
+  to { transform: rotate(0deg) scale(1); }
+}

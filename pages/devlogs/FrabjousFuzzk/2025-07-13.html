@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devlog #3</title>
+    <link href="/styles/main-style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+
+  <body class="background" style="background-image: url('/images/backgrounds/apple_park_vincinity.png');">
+
+    <div class="header blur">
+      <a href="/" class="header-link"> Lucas Hsu </a>
+      <a href="/home.html" class="header-link"> Home </a>
+      <a href="/pages/devlogs/" class="header-link"> Devlogs </a>
+      <a href="/pages/devlogs/FrabjousFuzzk/" class="header-link"> Frabjous Fuzzk </a>
+    </div>
+    
+    <div class="content blurier"> 
+
+        <div style="margin-top: 1em;"></div>
+        <div style="display: flex; align-items: center;">
+          <div id="musicImg" class="circle-container small reactive" style="border: 10px solid #b57cbd;">
+            <img class="small circle" src="/images/no-copyright/yokus-island-express.png">
+          </div>
+          <h1 style="flex:1; padding-left: 1em;"><a href="/pages/devlogs/FrabjousFuzzk/2025-07-13.html" class="center-content".html">Frabjous Fuzzk - Devlog #3</a></h1>
+        </div>
+        <div style="height: 0.5em;"></div>
+
+        <h2><a id="Day1" href="#Day1">Development Day 1</a></h2>
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> I have completed the goals stated for Day 1 of development. The player can now
+          pick up rocks and throw them in projectile motion to anywhere with simple physics, or kick rocks in a desired direction.
+          View the following video for a demonstration.
+        </p>
+
+        <a target="_blank" href="https://files.catbox.moe/fogafo.mp4">View video of features implemented (1.5MB)</a>
+
+        <ul>
+          <li> Player actions (Overworld) 
+            <ul>
+              <li>Move around in 8 directions (because keyboard)</li>
+              <li>Kick in the direction of cursor, knocking items away</li>
+              <li>Dance in 4 directions when not moving</li>
+              <li>Pick up items and throw them to the direction of cursor</li>
+              <li>Leveling up increases max stamina</li>
+              <li>Sleep to replenish stamina</li>
+            </ul>
+          </li>
+          <li> Feature Checklist
+            <ul>
+              <li>Stamina system</li>
+            </ul>
+          </li>
+        </ul>
+
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> I drew some simple art to use as placeholders, but they could
+          also be used in the final game if I run out of time. However, I will have to make sure the dimensions
+          of the sprites are standardized. Here is the "sprite sheet":
+        </p>
+        <img class="x-large-y" src="/images/PlaceholderSprites01.jpg"/>
+        <img class="x-large-y" src="/images/PlaceholderSprites02.jpg"/>
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> The rainbow creatures are the Fuzzks, and the number of hairs on the top 
+          of their head/body is the order in which they were born. So, Red is the oldest because it only has 1 strand of hair.
+          The grey thing is supposed to be a rock. The brown animal is a Shell, but it kind of looks like feces right now. The round brown thing
+          is the Shell when it is escaping from the player. Finally, the dark magenta thing is the Mosquito that pesters you.
+        </p>
+
+        <h2><a id="Throw" href="#Throw">...and Don't Throw Stones</a></h2>
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> The throwing rocks feature was the most complicated for me to implement, because it took
+          maths and physics knowledge. Good thing I had watched a <a target="_blank" href="https://youtu.be/4hzqmEqHSPY">video on projectile motion in video games</a> before and had an idea of how to solve
+          these kinds of problems.
+        </p>
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> The problem: Given gravitational acceleration (float), start position (Vector2), and target position (Vector2), where both 
+          start and target are on the same z-coordinate, find the initial velocity (Vector3) required for an object to get from start to target, following a path of initial 
+          angle above horizontal 45°. Which is to say, we need to find the magnitude of 
+              <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                <msub>
+                  <mi>v</mi>
+                  <mi>i</mi>
+                </msub>
+              </math>
+          and its rotation 
+              <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                <mi>&theta;</mi>
+              </math>
+           around the z-axis. 
+        </p>
+        <img class="x-large-y" src="/images/ThrowRock_Imagine.png"/>
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> The video I watched solve the problem of finding the path of 
+          a projectile that experiences wind force by "looking at the problem from a different angle, literally!"
+          It was very enlightening. Therefore, when solving this problem, I also looked at it from a different angle.
+          This problem is actually just a normal 2D projectile motion problem we encountered in class. All you have to do is
+          rotate the entire system around the z axis so that it aligns perfectly along the x-axis:
+        </p>
+        <img class="x-large-y" src="/images/ThrowRock_Recontext.png"/>
+        <p class="proportionalFont"> 
+          Using middle school physics, we can solve the problem: 
+          <br>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mi>t</mi><mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mn>2</mn><mo>&InvisibleTimes;</mo>
+                <msub><msup><mi>v</mi><mn>&#x2032;</mn></msup><msub><mi>i</mi><mi>y</mi></msub></msub>
+              </mrow>
+              <mi>g</mi>
+            </mfrac>
+            <mo>,</mo>
+          </math>   
+          <br> <span class="tabspace"></span> and 
+          <br>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mi>d</mi><mo>=</mo>
+            <mi>t</mi><mo>&InvisibleTimes;</mo>
+            <msub><msup><mi>v</mi><mn>&#x2032;</mn></msup><msub><mi>i</mi><mi>x</mi></msub></msub>
+            <mo>,</mo>
+          </math>
+          <br> <span class="tabspace"></span> so 
+          <br>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mi>d</mi><mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mn>2</mn><mo>&InvisibleTimes;</mo>
+                <msub><msup><mi>v</mi><mn>&#x2032;</mn></msup><msub><mi>i</mi><mi>y</mi></msub></msub>
+              </mrow>
+              <mi>g</mi>
+            </mfrac>
+            <mo>&InvisibleTimes;</mo>
+            <msub><msup><mi>v</mi><mn>&#x2032;</mn></msup><msub><mi>i</mi><mi>x</mi></msub></msub>
+            <mo>.</mo>
+          </math>
+          <br> <span class="tabspace"></span> Since angle is 45° 
+          <br> 
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <msub><msup><mi>v</mi><mn>&#x2032;</mn></msup><msub><mi>i</mi><mi>x</mi></msub></msub>
+            <mo>=</mo>
+            <msub><msup><mi>v</mi><mn>&#x2032;</mn></msup><msub><mi>i</mi><mi>y</mi></msub></msub>
+            <mo>,</mo>
+          </math>
+          <br> <span class="tabspace"></span> so
+          <br> 
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mi>d</mi><mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mn>2</mn><mo>&InvisibleTimes;</mo>
+                <msup>
+                  <msub><msup><mi>v</mi><mn>&#x2032;</mn></msup><msub><mi>i</mi><mi>x</mi></msub></msub>
+                  <mn>2</mn>
+                </msup>
+              </mrow>
+              <mi>g</mi>
+            </mfrac>
+            <mo>,</mo>
+          </math>
+          <br> <span class="tabspace"></span> which means
+          <br> 
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <msub><msup><mi>v</mi><mn>&#x2032;</mn></msup><msub><mi>i</mi><mi>x</mi></msub></msub>
+            <mo>=</mo>
+            <msqrt>
+              <mrow>
+                <mi>g</mi><mo>&InvisibleTimes;</mo><mi>d</mi><mo>/</mo><mn>2</mn>
+              </mrow>
+            </msqrt>
+            <mo>.</mo>
+          </math>
+          <br> <span class="tabspace"></span> Thus, we find 
+          <br> 
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <msub><msup><mi>v</mi><mn>&#x2032;</mn></msup><mi>i</mi></msub>
+            <mo>=</mo>
+            <msqrt><mn>2</mn></msqrt>
+            <mo>&InvisibleTimes;</mo>
+            <msqrt>
+              <mrow>
+                <mi>g</mi><mo>&InvisibleTimes;</mo><mi>d</mi><mo>/</mo><mn>2</mn>
+              </mrow>
+            </msqrt>
+            <mo></mo>
+          </math>
+          <br> <span class="tabspace"></span> whose components, when rotated back to the original direction, are as such:
+          <br> 
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <msub><mi>v</mi><msub><mi>i</mi><mi>x</mi></msub></msub>
+            <mo>=</mo>
+            <msqrt>
+              <mrow>
+                <mi>g</mi><mo>&InvisibleTimes;</mo><mi>d</mi><mo>/</mo><mn>2</mn>
+              </mrow>
+            </msqrt>
+            <mo>&InvisibleTimes;</mo>
+            <mi>cos</mi><mo>&#x2061;</mo><mi>θ</mi>
+          </math>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <msub><mi>v</mi><msub><mi>i</mi><mi>y</mi></msub></msub>
+            <mo>=</mo>
+            <msqrt>
+              <mrow>
+                <mi>g</mi><mo>&InvisibleTimes;</mo><mi>d</mi><mo>/</mo><mn>2</mn>
+              </mrow>
+            </msqrt>
+            <mo>&InvisibleTimes;</mo>
+            <mi>sin</mi><mo>&#x2061;</mo><mi>θ</mi>
+            </math>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <msub><mi>v</mi><msub><mi>i</mi><mi>z</mi></msub></msub>
+            <mo>=</mo>
+            <msqrt>
+              <mrow>
+                <mi>g</mi><mo>&InvisibleTimes;</mo><mi>d</mi><mo>/</mo><mn>2</mn>
+              </mrow>
+            </msqrt>
+          </math>
+        </p>
+        <p class="proportionalFont"> 
+          <span class="tabspace"></span> Of course, once the rock lands, it should also check for collision
+          with other rocks, and knock the rocks along the impact normal direction so that the game feels reactive. 
+          This can be achieved by using the built-in physics system in the game, but I feel like that takes away control. 
+          By coding the physics myself, I can create special ways to handling specific collisions or fine-tune the
+          feel of the gravity or friction.
+          <br><br>
+          Additionally, I think the throwing stones function should have a maximum limit to prevent players from throwing stones 
+          too far away, which would be unrealistic. However, it depends on how easy the hunting mode is, so I will have to implement the 
+          Shells first before I decide. In any case, being able to throw it very far is indeed fun. 
+        </p>
+
+
+        <div class="footer">
+          <a style="flex: 1;" href="/pages/devlogs/FrabjousFuzzk/2025-07-12.html"> PREV </a>
+          <span style="width: 100%;""></span>
+          <a style="flex: 1; margin-right: 2em;" href="/pages/devlogs/FrabjousFuzzk/2025-07-14.html"> NEXT </a>
+        </div>
+        
+    </div>
+
+    <audio id="music" src="/music/no-copyright/toku-taidua-and-the-village.mp3" loop></audio>
+    <script src="/scripts/looping-bg-music.js"></script>
+
+  </body>
+
+</html>
