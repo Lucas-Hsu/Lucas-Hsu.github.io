@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devlog #7</title>
+    <link href="/styles/main-style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+
+  <body class="background" style="background-image: url('/images/backgrounds/apple_park_vincinity.png');">
+
+    <div class="header blur">
+      <a href="/" class="header-link"> Lucas Hsu </a>
+      <a href="/home.html" class="header-link"> Home </a>
+      <a href="/pages/devlogs/" class="header-link"> Devlogs </a>
+      <a href="/pages/devlogs/FrabjousFuzzk/" class="header-link"> Frabjous Fuzzk </a>
+    </div>
+    
+    <div class="content blurier"> 
+      <div style="margin-top: 1em;"></div>
+      <div style="display: flex; align-items: center;">
+        <div id="musicImg" class="circle-container small reactive" style="border: 10px solid #b57cbd;">
+          <img class="small circle" src="/images/no-copyright/p3_soundtrack_disk1.png">
+        </div>
+        <h1 style="flex:1; padding-left: 1em;"><a href="/pages/devlogs/FrabjousFuzzk/2025-07-17.html" class="center-content".html">Frabjous Fuzzk - Devlog #7</a></h1>
+      </div>
+      <div style="margin-bottom: 0.5em;"></div>
+
+      <h2><a id="Day5" href="#Day5">Development Day 5</a></h2>
+      <img class="large-y" src="/images/L U C A S.png"/>
+      <p>Frabjous Fuzzk passed The "Minecraft Test" \ <br> You can make anything with rocks!</p>
+
+      <h2><a id="Change" href="#Change">Change of Plans</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> It was planned that I would be working on the "Space Invaders Animal Cells Version" today alongside with the dance minigame, however 
+        I have decided not to add that. The reason is simple: It's not fun :P. To elaborate, I played the game and found out that it wouldn't be more fun with the space invaders minigame. In theory, something like that 
+        would very well, because it could change the pacing of the game and the skills required, which makes the game feel less monotonous. Here's an example: 
+        <br> <br> 
+      </p>
+      <div style="display: flex; flex-direction: row;">
+        <div style="display: flex; flex-direction: column;">
+          <img class="medium-y" src="/images/no-copyright/nier_automata_fighting.gif"/>
+      <p>NieR: Automata action gameplay</p>
+        </div>
+        <span class="tabspace"></span>
+        <div style="display: flex; flex-direction: column;">
+          <img class="medium-y" src="/images/no-copyright/nier_automata_hacking.gif"/>
+      <p>NieR: Automata hacking mini-game</p>
+        </div>
+      </div>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> In <a target="_blank" href="https://www.platinumgames.com/works/nier-automata/">NieR: Automata</a>, if you play as 
+        the 9S android, you can hack enemies, which is a 2D top-down shooter mini-game within a 3D action game. It's fun! You get to play something different, *and* it deals a LOT of damage!
+        I think, the reason why it works so well in NieR: Automata is because the base fighting action is already complex, but doesn't require much precision, so the 
+        hacking mini-game where you only have 3HP works well because it contrasts with you usual play-style. 
+      </p>
+
+
+
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> However, it does not fit my design. We already have the hunting 
+        minigame, which is already a "distraction" from the overworld. If I add another layer of complexity, there is a risk of making the game feel disconnected. And since many players 
+        only enjoy specific types of games, they would not agree my idea that we should balance various types of gameplay. My sister already told me that she thinks the "typing game" (the hunting mini-game) 
+        in my game feels random and out of place. That is why I will no longer add a space invaders minigame into the 
+        game. Instead, I will focus on making the overworld more interesting to play around in. 
+      </p>
+
+      <h2><a id="Shadow" href="#Shadow"> Shadow World </a></h2>
+
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> I started by adding shadows to the game. Although they have no use gameplay-wise, 
+        it really grounds the in-game objects. In other words, shadows make the sprites look more tangible, instead of just 
+        being random floating images on your computer screen. It makes objects feel like a coherent part of the world. Especially 
+        when the shadows are "dynamic", like how I implemented them. What I did was I calculated the real 2D position of the rocks 
+        when they are being thrown, and projected the shadows there, so the result is that rocks flying in the air, while shadows move 
+        along the ground. It's very cool.
+      </p>
+
+      <div style="display: flex; flex-direction: row;">
+        <div style="display: flex; flex-direction: column;">
+          <img class="medium" src="/images/shadows.png"/>
+          <p >Shadow of the Cool Rocks</p>
+        </div>
+        <span class="tabspace"></span>
+        <div style="display: flex; flex-direction: column;">
+          <img class="medium-y" src="/images/throw_shadow.gif"/>
+          <p style="text-align: center;">Looks almost real!</p>
+        </div>
+      </div>
+
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> I added shadows to the Fuzzks, Shells, and Toes. It's very simple, actually. 
+        All I did was add a squished sprite underneath their sprites. If you haven't noticed, I also added shadows for 
+        Cyan's house (I didn't draw shadows beneath the house previously).
+      </p>
+
+      <img class="medium-y" src="/images/shadow.png"/>
+      <p style="text-align: center;">Shadow Sprite made using <a target="_blank" href="https://www.gimp.org/"> GNU Image Manipulation Program</a> </p>
+
+      <h2><a id="Toes" href="#Toes"> Toes </a></h2>
+
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> But the thing I'm most proud of is my <i>Toes</i>. You might have forgotten about them, 
+        because I didn't mention them that much. I've mostly been focusing on the Fuzzks and Shells, and nearly forgot about the 
+        Toes myself. They were last seen <a target="_blank" href="/pages/devlogs/FrabjousFuzzk/2025-07-14.html#Toes">here</a>.
+      </p>
+
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> I drew a draft for the AI of the Toes enemies in my notebook. It's called a <a target="_blank" href="https://gameprogrammingpatterns.com/state.html#finite-state-machines-to-the-rescue">Finite-State Machine</a>. 
+        I learned how to use Behavior Trees in a short Unreal Engine Game Development course I participated in before, but I feel like a Finite-State Machine is more appropriate here. 
+        Behavior trees are great for if you have complex specific behaviors that the AI should do. However, in my game, the enemies are very simple, so FSMs are more intuitive and easy to think about, 
+        at least for me. Shown below is my first draft of the Toes AI design, which stayed almost entirely unchanged even after coding and testing. (I'll be sure to make a digital version using a graphing program when I have time.): 
+      </p>
+      <img class="large-y" src="/images/ToeFSM.jpeg"/>
+      <p>Toes Finite-State Machine</p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> The Toes, inspired by mosquitTOES, are small flying creatures that live in swarms. Usually, they hover around aimlessly.
+        However, if they are hungry, and they discover a living creature, they will slowly approach the creature. If within a certain range, they will rush forward and 
+        charge at the create, trying to sting them with their really sharp toenail. They do this because it they, like mosquitoes, live on blood, and they will be 
+        able to leech stamina points off the player, or even other creatures (Shells). If they kill the target, they'll loose interest and fall asleep right next to the carcass.
+        But if the creature is fierce, like the Player (you!), they might end up getting severely injured, in which case they will choose to 
+        escape. Unlike the dumb Shells who always move in straight lines and accidentally bump into rocks, stunning themselves, the intelligent Toes choose the mose effective path 
+        away from the player. 
+      </p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> A group of Toes can easily crack open the exoskeleton of Shells, killing them within seconds. However, though they are fearsome in large groups, these creatures are 
+        helpless when alone, especially against the nimble and highly-intelligent rainbow-colored Fuzzks. Especially due to the Fuzzk's powerful ability to pick up the huge rocks 
+        scattered around the world and throw them at their enemies. Therefore, Toes usually do not bother Fuzzks. However, the Cyan Fuzzk's blood tastes eerily similar to 
+        Blue Lemonade (irresistable!), which is why they are inclined to sting the player if they're hungry.
+      </p>
+      <img class="large-y" src="/images/Toe_art_plan.jpeg"/>
+      <p>Concept art of my Toes</p>
+      <div class="footer">
+        <a style="flex: 1;" href="/pages/devlogs/FrabjousFuzzk/2025-07-16.html"> PREV </a>
+        <span style="width: 100%;""></span>
+        <a style="flex: 1; margin-right: 2em;" href="/pages/devlogs/FrabjousFuzzk/2025-07-18.html"> NEXT </a>
+      </div>
+    </div>
+
+    <audio id="music" src="/music/no-copyright/shadow.mp3" loop></audio>
+    <script src="/scripts/looping-bg-music.js"></script>
+
+  </body>
+
+</html>

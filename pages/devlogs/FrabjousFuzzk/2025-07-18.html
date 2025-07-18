@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devlog #8</title>
+    <link href="/styles/main-style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+
+  <body class="background" style="background-image: url('/images/backgrounds/white_flowers_contrast.png');">
+
+    <div class="header blur">
+      <a href="/" class="header-link"> Lucas Hsu </a>
+      <a href="/home.html" class="header-link"> Home </a>
+      <a href="/pages/devlogs/" class="header-link"> Devlogs </a>
+      <a href="/pages/devlogs/FrabjousFuzzk/" class="header-link"> Frabjous Fuzzk </a>
+    </div>
+    
+    <div class="content blurier"> 
+      <div style="margin-top: 1em;"></div>
+      <div style="display: flex; align-items: center;">
+        <div id="musicImg" class="circle-container small reactive" style="border: 10px solid #b57cbd;">
+          <img class="small circle" src="/images/no-copyright/neon_genesis_evangelion.png">
+        </div>
+        <h1 style="flex:1; padding-left: 1em;"><a href="/pages/devlogs/FrabjousFuzzk/2025-07-18.html" class="center-content".html">Frabjous Fuzzk - Devlog #8</a></h1>
+      </div>
+      <div style="height: 0.5em;"></div>
+
+      <h2><a id="Thanatoes" href="#Thanatoes">Thanatoes</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> With the last tiny wisp of lifeforce kicked out of its fragile body, the Toe 
+        takes one last look at the cruel world with its non-existent eyes. Then, at first slowly but quickly spreading, it's dark purple 
+        body disintegrates, just like Thanos at the end of <i>Avengers: Endgame (2019)</i>. All that is left are the two wings, 
+        made of marshmellow and–HEY! Don't eat that, he touched it with his foot!
+      </p>
+
+      <img class="large-y" src="/images/thanatoes.gif"/>
+      <p>Toeny starkly dies</p>
+
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> The animation for the Toes' death is not funny or dumb, not
+        at all. Rather, I think it's calm, peaceful, and maybe even a little elegant. The way the wings slowly drop to the ground 
+        like feathers, it really feels soft and comforting. After a very intense battle of kicking and stinging, thousands of flaps 
+        of the wings, the Toe finally dies. That hideous creature, finally at peace.
+        <br><br>
+        <span class="tabspace"></span> It's a surprise that this Toe death animation turned out so well. I just wanted my enemy carcasses to despawn like how other games do it, 
+        disappearing when you aren't looking. However, it was a bit weird to have random purple feet on the ground, so I designed the 
+        toes to be easily destroyed, so when you kick them a lot, their body breaks, and only the wings remain. The fading out me trying 
+        out how to use linear interpolation (lerp), which I eventually used on the wings dropping down, as well as the Toes' changing 
+        direction. 
+        <br><br>
+        <span class="tabspace"></span> I think the fact that the death animation of this video game creature is so intriguing shows that 
+        the enemy is lifelike enough. Right? Without life, there can be no death. So it's pretty cool to see. A lot of the work was accomplished 
+        by the "advanced" AI system I programmed for it, but the art and animations really did the most in bringing the creature alive.
+        <br><br>
+        <span class="tabspace"></span> What I'm trying to say is that I was wrong, at the beginning of my planning for this game, to assume 
+        that the art doesn't matter as long as the core gameplay is fun. We don't like playing text-based games, not because we don't like reading,
+        but beacuse a game is a sum of all it's parts. I think every single component in a game matters. That's the gameplay, the sound effects, 
+        the artwork and visual effects, the soundtrack, the story, the user interface, and maybe even the keyboard controls!
+        <br><br>
+        <span class="tabspace"></span> However, my time is limited, and I do not have the skills to do everything on my own. I'm nearing the end 
+        of my 7-Day development plan, and the game probably won't be in a satisfactory shape by the end of tomorrow. I still have to add the UI, the sound 
+        effects, the final bossfight, as well as the saving&loading system. 
+      </p>
+
+      <a target="_blank" href="https://files.catbox.moe/">Here's a video of what the game looks like right now (?.?MB)</a>
+
+      <h2><a id="Local" href="#Local">Local Spawners</a></h2>
+      <img class="large-y" src="/images/world_editor.png"/>
+      <p>The Overworld as it appears to me in the Godot Editor </p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> One important addition to the game is the local spawner. Instead of a global spawner that  
+        keeps track of the total amount of each type of enemy in the world, and spawns them right outside view of the player, local 
+        spawners are their own isolated ecosystem. This allows for more varied ranges of enemy combinations. That is to say, it's more
+        realistic, because the world map contains ice mountains, swamps, deserts, forests, grass plains, and a river, so it's impossible 
+        for the entire world to have the exact same random placement of enemies. Now, I can make there be more Toes along the river, and 
+        make the grass plain abundant with Shells.
+      </p>
+
+      
+      <h2><a id="UI" href="#UI">User Interface</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> The other change I made is to the User Interface design. Instead of displaying the 
+        player's health under them, I removed it completely, and instead made it so that a vignette effect appears and gradually darkens
+        as the player's health decreases. It's less accurate, but it's more visually appealing, and gives immediate visual 
+        feedback rather than requiring the player to read a number. If you say that healthbars don't require reading, well, they don't 
+        provide good accuracy of health value either. In fact, I completely removed health bars from enemies, and even the Fuzzks. 
+        <br><br>
+      </p>
+      <img class="large-y" src="/images/hurt_vignette.gif"/>
+       <p>Stubbed by Toes</p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> I'm not sure yet if it's necessary to show the player the progress of the dance battle, or if the damage flashes are enough. 
+        I think, a disco ball that shines brighter and brighter as you progress through the dance would be very nice, but would take 
+        a lot of time to draw. For now, the damage flashes are enough. Of course, if you fail to do the correct dance move, you take damage, 
+        and the vignette effect gets darker. 
+        <br><br>
+      </p>
+      <img class="medium-y" src="/images/dance_flashes.gif"/>
+      <p>Dance Battle</p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> As I designed, there will still be a progress bar for the hunting countdown. 
+        But instead of a number that shows the Shell's remaining stamina, I'll instead modulate the sprite, make it gradually more red as 
+        you attack it with you press the correct keys.
+      </p>
+      
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> I'll try to finish as much of the game as I can tomorrow, but if needs be, 
+        I still have an extra day to spend on the game this Sunday.
+      </p>
+      <div class="footer">
+        <a style="flex: 1;" href="/pages/devlogs/FrabjousFuzzk/2025-07-17.html"> PREV </a>
+        <span style="width: 100%;""></span>
+        <a style="flex: 1; margin-right: 2em;" href="/pages/devlogs/FrabjousFuzzk/2025-07-18.html"> NEXT </a>
+      </div>
+    </div>
+
+    <audio id="music" src="/music/no-copyright/thanatos.mp3" loop></audio>
+    <script src="/scripts/looping-bg-music.js"></script>
+
+  </body>
+
+</html>

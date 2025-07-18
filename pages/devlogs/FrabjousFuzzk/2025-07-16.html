@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devlog #6</title>
+    <link href="/styles/main-style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+
+  <body class="background" style="background-image: url('/images/backgrounds/apple_park_vincinity.png');">
+
+    <div class="header blur">
+      <a href="/" class="header-link"> Lucas Hsu </a>
+      <a href="/home.html" class="header-link"> Home </a>
+      <a href="/pages/devlogs/" class="header-link"> Devlogs </a>
+      <a href="/pages/devlogs/FrabjousFuzzk/" class="header-link"> Frabjous Fuzzk </a>
+    </div>
+    
+    <div class="content blurier"> 
+      <div style="margin-top: 1em;"></div>
+      <div style="display: flex; align-items: center;">
+        <div id="musicImg" class="circle-container small reactive" style="border: 10px solid #b57cbd;">
+          <img class="small circle" src="/images/no-copyright/hue.png">
+        </div>
+        <h1 style="flex:1; padding-left: 1em;"><a href="/pages/devlogs/FrabjousFuzzk/2025-07-16.html" class="center-content".html">Frabjous Fuzzk - Devlog #6</a></h1>
+      </div>
+      <div style="margin-bottom: 0.5em;"></div>
+
+      <h2><a id="Day4" href="#Day4">Development Day 4</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> I finally implemented the hunting minigame. It adds another layer to the gameplay 
+        and makes the game feel more varied. Other than that, I drew some more art and animations, as well as fixed a few bugs in the code.
+      </p>
+
+      <a target="_blank" href="https://files.catbox.moe/9iam4g.mp4">View video of features implemented (2.6MB)</a>
+
+      <h2><a id="Hunt" href="#Hunt">Hunting Shells</a></h2>
+
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> The hunting minigame went through several iterations before I was satisfied with the result. 
+        Though the general idea was the same, the exact implementation details change the mood and feel of the minigame drastically. 
+        As I stated during the planning phase, I wanted this to be a precise, complex, and high-pressure challenge. 
+        <br><br>
+        <span class="tabspace"></span> I first implemented it as a sort of button mashing minigame like the hacking mini-game in 
+        <a target="_blank" ="https://90s.graphics/about/">Peripeteia</a>, where you press lots of buttons randomly 
+        until you hit the correct buttons in the right order to progress through the minigame. Peripeteia's hacking mini-game does well to simulate the 
+        excitement and *coolness* of being a skilled hacker. However, the same design cannot work everywhere. In my hunting mini-game, I wanted it 
+        to simulate a more reactive behavior, specifically of a predator wrestling with a fierce prey, attempting to prevent it from escaping.
+        The button mashing was simple and fun, but it went against my design. In other words, I wanted it to be more methodical. 
+      </p>
+      <img class="large-y" src="/images/no-copyright/peri_hacking.jpg"/>
+      <p>The Peripeteia hacking interface.</p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> The first thing I did was add a penalty for pressing the wrong button. It slowed the pacing of the 
+        minigame down because it immediately provided a challenge. Press the keys presented on the keys, and <i>only</i> those keys. I thought 
+        of two ways of implementing the penalty. The first was to decrease the timer by a large amount for every wrong button pressed. This is good 
+        because I already had a timer, but the timer didn't affect the gameplay too much, and now this makes the timer more meaninful. However, 
+        removing time from the timer is unintuitive because players would naturally assume timers tick down second by second. The other idea was to 
+        take note of how many wrong key the player pressed, and fail the player when it reaches a certain threshold. This makes errors concrete 
+        and makes it easy for me to adjust the margin of error, but the arbitrariness of the threshold would be annoying to the user. 
+        <br><br>
+        <span class="tabspace"></span> Ultimately, I decided that the former idea was better. To deal with the downside of the timer being unintuitive, 
+        I could just represent the counting down timer with a "Escape Meter" progress bar that slowly goes from green to red, and makes large jumps 
+        whenever you press a wrong button. I'm still figuring out what's the best way to work with UI, so I haven't made that change yet.
+      </p>
+      <img class="large-y" src="/images/hunting_shells.gif"/>
+      <p>The hunting interface.</p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> One last thing I had to consider when designing the minigame was the coordination between left and right hand. 
+        I found that I could complete the minigame faster and easier if I just focused on pressing the button prompts for one hand ("j","k","l") and 
+        ignored the left hand. Conceptually it was like the Fuzzk was having a stroke, one half side of its body completely motionless. That went 
+        against the idea of having to coordinate your body just like when Fuzkks hunt prey, especially because I wanted 
+        each finger to feel like one of the Fuzzks' legs. In order to solve this problem of over-specialization, I made it so that the button 
+        prompts only update when you press two keys, one for the left hand ("s", "d", ""f), and one for the right hand. 
+      </p>
+
+      <h2><a id="pArty" href="#pArty">Dance pART(y)</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> I drew and shaded new animation sprites for the player character. The time spent on shading 
+        was mostly wasted because its too small to see. I guess I was right, shouldn't have shaded it. But it was good practice, as 
+        it really helps improve my art skills.
+        <br><br>
+        <span class="tabspace"></span> Luckily the Fuzzks are the same creature as the player character, so all I had to do was hue-shift 
+        the player sprites into each of the other colors of the rainbow to get the Fuzzk sprites. I think you can do that inside Godot, but 
+        I generated new images using some simple python code, by treating the RGBA images as HSV, and then modifying the hue values by a specific amount 
+        for each Fuzzk. That's because I might go back and modify some of the details in the sprites when I have free time in the future, since 
+        in my design, each Fuzzk has a different number of hairs on their head based on their age.
+      </p>
+      <img class="x-large-y" src="/images/familyphoto.png"/>
+      <p>Fuzzk Family Photo</p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> If you are above the required lvl (you gain xp to lvl up by hunting), you can interact with 
+        specific Fuzzks to enter a dance battle with them. The battle is just a rhythm game. You copy whatever dance move they are dancing, 
+        and if you do it wrong, or fail to keep up, your stamina decreases. If you do it correctly, their stamina decreases. You win if they 
+        run out of stamina and you loose if you run out of stamina first. After you win, they join you on your team. 
+        <br><br>
+        <span class="tabspace"></span> The only way to fight the final boss is if you collect all Fuzzks, because the final boss battle will be impossible difficult if 
+        you don't. The story reason for that is, since Scary Monster devoured Red Fuzzk, you need to assemble all the other colors of the rainbow 
+        in your team, and once you get near the Scary Monster, the rainbow colors will interact with the Red Fuzzk inside the belly of the 
+        Scary Monster, and Scary Monser will be greatly weakened, opening it up to your attacks. 
+      </p>
+      <img class="large-y" src="/images/dancing.gif"/>
+      <p>Dancing with Yellow <br> (New rock texture!)</p>
+      <div class="footer">
+        <a style="flex: 1;" href="/pages/devlogs/FrabjousFuzzk/2025-07-15.html"> PREV </a>
+        <span style="width: 100%;""></span>
+        <a style="flex: 1; margin-right: 2em;" href="/pages/devlogs/FrabjousFuzzk/2025-07-17.html"> NEXT </a>
+      </div>
+    </div>
+
+    <audio id="music" src="/music/no-copyright/apex.mp3" loop></audio>
+    <script src="/scripts/looping-bg-music.js"></script>
+
+  </body>
+
+</html>
