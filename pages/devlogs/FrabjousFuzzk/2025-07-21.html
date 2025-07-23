@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devlog #11</title>
+    <link href="/styles/main-style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+
+  <body class="background" style="background-image: url('/images/backgrounds/apple_park_vincinity.png');">
+
+    <div class="header blur">
+      <a href="/" class="header-link"> Lucas Hsu </a>
+      <a href="/home.html" class="header-link"> Home </a>
+      <a href="/pages/devlogs/" class="header-link"> Devlogs </a>
+      <a href="/pages/devlogs/FrabjousFuzzk/" class="header-link"> Frabjous Fuzzk </a>
+    </div>
+    
+    <div class="content blurier"> 
+      <div style="margin-top: 1em;"></div>
+      <div style="display: flex; align-items: center;">
+        <div id="musicImg" class="circle-container small reactive" style="border: 10px solid #b57cbd">
+          <img class="small circle" src="/images/no-copyright/lazarus_decay.png">
+        </div>
+        <h1 style="flex:1; padding-left: 1em;"><a href="/pages/devlogs/FrabjousFuzzk/2025-07-21.html" class="center-content".html">Frabjous Fuzzk - Devlog #11</a></h1>
+      </div>
+      <div style="height: 0.5em;"></div>
+
+      <h2><a id="Boss" href="#Boss">Bossfight Alpha Version</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> As promised, here is the boss battle! (It's rough, but at least it works!)
+      </p>
+
+      <a target="_blank" rel="noopener" href="https://files.catbox.moe/m1981z.mp4">View video of features implemented (10.1MB)</a>
+
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> Rocks drop from the ceiling because the Scary Monster has a very loud roar (roar not implemented). 
+        Throw rocks at the Scary Monster to damage it. Attack it enough to stun it. If you are too slow, it will start attacking you. When it attacks, 
+        you have to dodge, which is the dance system. However, now, you only have one chance, so if you hit the wrong button, you are locked in that move, and 
+        are guaranteed to take around 25% max stamina damage. If you stun it, however, you have three chances to hunt it, and if you succeed once, then your stamina
+         will replenish by 50% max stamina. After each time you stun it and it wakes up, it eats one of your fuzzks to replenish its power. Then, the cycle starts again. 
+         <br><br>
+         <span class="tabspace"></span> Again throw rocks, again dance, again hunt, until <i>you</i> are eaten. But this was your plan all along. Because now all 7 Fuzzks (including Red) are inside the Scary Monster, you combine 
+         into white light and destroy the scary monster. (The concept is that the scary monster is a creature made of darkness, but I didn't draw art for it yet).
+         <br><br>
+         <span class="tabspace"></span>If you lose, you have to reload a save you made in the overworld, so you should save (sleep) before you enter the cave. 
+         If you win, there will be a short comic strip or cutscene that shows how you won against Scary Monster, and then you can reload the save from outside. 
+         I'll be sure to implement an autosave before you enter the cave if I have time.
+      </p>
+
+
+      <h2><a id="XP" href="#XP">Audio-visual representation of player XP and LVL</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> Although the game itself is fun, players do not have an idea of why they should be hunting the 
+        animals. That's because they don't understand that hunting shells and attacking toes levels them up, which makes it easier to win 
+        dance battles against fuzzks. That's why I added XP points to show the player when exactly are they being rewarded. This is shown to work 
+        in <a target="_blank" rel="noopener" href="https://www.minecraft.net">Minecraft</a>, with the little green orbs that drop when the player kills mobs. It's used as a representation of a quantitative reward for interacting 
+        with the combat system, and many other systems, in that game. 
+      </p>
+
+      <div style="display: flex; flex-direction: row;">
+        <div style="display: flex; flex-direction: column;">
+          <video class="medium-y" controls>
+            <source src="/videos/no-copyright/Minecraft XP Orbs.mp4" type="video/mp4">
+            Video playback unsupported. Download it here <a src="/videos/no-copyright/Minecraft XP Orbs.mp4" >here</a>.
+          </video>
+          <p style="text-align: center;">Minecraft Experience Orbs</p>
+        </div>
+        <span class="tabspace"></span>
+        <div style="display: flex; flex-direction: column;">
+          <video class="medium-y" controls>
+            <source src="/videos/FrabjousFuzzk XP Shards.mp4" type="video/mp4">
+            Video playback unsupported. Download it here <a src="/videos/FrabjousFuzzk XP Shards.mp4" >here</a>.
+          </video>
+          <p style="text-align: center;">Frabjous Fuzzk XP Shards</p>
+        </div>
+      </div>
+
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> At first, I thought that blood splatter may fit the unpredictable violent style I wanted for the game, but it was too 
+        disturbing to look at, especially because the art style meant kids would be more drawn to this game. I no longer wanted the violence to be shocking. Instead, 
+        I want to show how violence is a natural part of the world, so that's why I decided against the idea that Fuzzks fed on blood like vampires, and made these 
+        dream-like XP orbs, since the rest of the game was already dream-like.
+        <br><br>
+        <span class="tabspace"></span> The reason why the XP Shards in Frabjous Fuzzk are like this, and not blood, or like those orbs in Minecraft is due to the overall atmosphere 
+        of my game. They are the sun, the moon, and stars, represented by spheres, crescents, and 4-pointed stars. In my opinion, the astronomy-related
+         symbolism allows for my game to feel mystical, like a fairy tale from another planet. In comparison to Minecraft, where it's more grounded, my 
+        game is more childish and playful, so our designs are different. In Frabjous Fuzzk, you kill enemies because you want to get better at dancing, 
+        so you can recruit your brothers, and save Red Fuzzk. In Minecraft, you are fighting to survive. That's the difference.
+      </p>
+
+      <div class="footer">
+        <a style="flex: 1;" href="/pages/devlogs/FrabjousFuzzk/2025-07-20.html"> PREV </a>
+        <span style="width: 100%;""></span>
+        <a style="flex: 1; margin-right: 2em;" href="/pages/devlogs/FrabjousFuzzk/2025-07-22.html"> NEXT </a>
+      </div>
+    </div>
+
+    <audio id="music" src="/music/no-copyright/corridor_horror_overworld_theme.mp3" loop></audio>
+    <script src="/scripts/looping-bg-music.js"></script>
+
+  </body>
+
+</html>

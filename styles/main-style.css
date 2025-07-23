@@ -11,8 +11,12 @@
   font-weight: normal;
   font-style: normal;
 }
-
-
+@font-face {
+  font-family: 'Maple Mono';
+  src: url('/fonts/no-copyright/Maple Mono/MapleMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 body, html {
   margin: 0;
@@ -29,31 +33,12 @@ p {
   text-align: left;
 }
 
+
 a {
   text-decoration: none;
   font-weight: bold;
 }
-a:link {
-  color: rgb(0, 76, 106);
-}
-a:visited {
-  color: rgb(0, 76, 106);
-}
-a:hover {
-  color: white;
-  text-shadow:  0px 0px 4.48em magenta,
-                0px 0px 2.24em magenta,
-                0px 0px 2.24em cyan,
-                0px 0px 1.12em cyan,
-                0px 0px 0.56em rgb(173, 255, 255),
-                0px 0px 0.28em rgb(181, 253, 253);
-}
-a[target="_blank"] {
-  color: rgb(106, 0, 90);
-}
-a[target="_blank"]:visited {
-  color: rgb(106, 0, 90);
-}
+
 a[target="_blank"]:hover {
   color: white;
   text-shadow:  0px 0px 4.48em greenyellow,
@@ -63,6 +48,35 @@ a[target="_blank"]:hover {
                 0px 0px 0.56em rgb(173, 255, 255),
                 0px 0px 0.28em rgb(181, 253, 253);
 }
+
+a[rel="noopener"]:link,
+a[rel="noopener"]:visited {
+  color: rgb(106, 0, 90);
+}
+a[rel="noopener"]:hover {
+  color: white;
+  text-shadow:  0px 0px 4.48em greenyellow,
+                0px 0px 2.24em greenyellow,
+                0px 0px 2.24em cyan,
+                0px 0px 1.12em cyan,
+                0px 0px 0.56em rgb(173, 255, 255),
+                0px 0px 0.28em rgb(181, 253, 253);
+}
+
+a:not([rel="noopener"]):link,
+a:not([rel="noopener"]):visited {
+  color: rgb(0, 76, 106);
+}
+a:not([rel="noopener"]):hover {
+  color: white;
+  text-shadow:  0px 0px 4.48em magenta,
+                0px 0px 2.24em magenta,
+                0px 0px 2.24em cyan,
+                0px 0px 1.12em cyan,
+                0px 0px 0.56em rgb(173, 255, 255),
+                0px 0px 0.28em rgb(181, 253, 253);
+}
+
 
 ul {
   text-align: left;
@@ -195,6 +209,13 @@ ol {
   font-family: 'Times New Roman', Times, serif;
 }
 
+.monospaceFont {
+  font-size: large;
+  font-family: 'Maple Mono', monospace;
+  color: black;
+  text-shadow: 0em 0em 0.1em rgb(255, 255, 255);
+}
+
 .prewrap {
   white-space: pre-wrap;
 }
@@ -205,11 +226,19 @@ ol {
   text-align: center;
 }
 
+.xx-large-x{
+  max-width: 20em;
+  min-width: 20em;
+}
 .x-large{
   max-width: 16em;
   max-height: 16em;
   min-width: 16em;
   min-height: 16em;
+}
+.x-large-x{
+  max-width: 16em;
+  min-width: 16em;
 }
 .x-large-y {
   max-height: 16em;
@@ -228,21 +257,27 @@ ol {
 .medium {
   min-width: 9em;
   max-width: 9em;
+  width: 9em;
+  height: 9em;
   min-height: 9em;
   max-height: 9em;
 }
 .medium-y {
   min-height: 9em;
+  height: 9em;
   max-height: 9em;
 }
 .small {
   min-width: 6em;
   max-width: 6em;
+  width: 6em;
+  height: 6em;
   min-height: 6em;
   max-height: 6em;
 }
 .small-y {
   min-height: 6em;
+  height: 6em;
   max-height: 6em;
 }
 

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devlog #9</title>
+    <link href="/styles/main-style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+
+  <body class="background" style="background-image: url('/images/backgrounds/apple_park_vincinity.png');">
+
+    <div class="header blur">
+      <a href="/" class="header-link"> Lucas Hsu </a>
+      <a href="/home.html" class="header-link"> Home </a>
+      <a href="/pages/devlogs/" class="header-link"> Devlogs </a>
+      <a href="/pages/devlogs/FrabjousFuzzk/" class="header-link"> Frabjous Fuzzk </a>
+    </div>
+    
+    <div class="content blurier"> 
+      <div style="margin-top: 1em;"></div>
+      <div style="display: flex; align-items: center;">
+        <div id="musicImg" class="circle-container small reactive" style="border: 10px solid #b57cbd;">
+          <img class="small circle" src="/images/no-copyright/disco_elysium.png">
+        </div>
+        <h1 style="flex:1; padding-left: 1em;"><a href="/pages/devlogs/FrabjousFuzzk/2025-07-19.html" class="center-content".html">Frabjous Fuzzk - Devlog #9</a></h1>
+      </div>
+      <div style="height: 0.5em;"></div>
+
+      <h2><a id="Hunting" href="#Hunting">Updated Hunting UI</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> As designed, I updated the hunting mini-game UI to be more intuitive. Now 
+        players can visibly see the Shell struggling to escape, and how their actions affect the progress of escape. 
+        I also made it so that the timer starts halfway, and each correct key press pushes the timer back by a little bit.
+        This way, it feels more like a struggle, a back and forth between prey and predator. Huge success!
+      </p>
+
+      <video class="x-large-y" controls>
+        <source src="/videos/huntingUI_soundEffects_day7.mp4" type="video/mp4">
+        Video playback unsupported. View it <a target="_blank" rel="noopener" src="https://files.catbox.moe/sul8vu.mp4" >here</a>.
+      </video>
+      <p>Hunting mini-game UI: No more numbers! (sound)</p>
+
+      <h2><a id="Scary" href="#Scary">Scary Monster Design</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> I think bossfights are a final test of skill, and a dramatic conclusion to the game that you play. 
+        Otherwise, you could just end the game with a story cutscene or something equivalent. That is why, for the final boss of the game, I want it to still test the skills you've used throughout 
+        the game: throwing stones, kicking, the hunting mini-game, and dancing. So, when you fight the final boss, you can attack it 
+        by throwing stones and kick to attack, and when it is stunned, you can hunt it, dealing great damage. When it is attacking you, 
+        you have to dance correctly to dodge and counter attack. I still don't have time to implement it, so I'll leave the bossfight to the 
+        future. 
+      </p>
+
+      <h2><a id="Sound" href="#Sound">Sound Effects</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> It is a joy to create sound effects. Instead of searching online for samples, you should 
+        try and record them yourself! Anything can be the source material for sound effects. It doesn't have to sound exactly like 
+        what it would sound like in real life. All you have to do is make it *feel* like the sound that is <i>should</i> make. I'll show 
+        you how I made each of my sound effects.
+      </p>
+
+      <h3>Walk Cycle</h3>
+      <video class="medium-y" controls>
+        <source src="/videos/WALK_CYCLE.mp4" type="video/mp4">
+        Video playback unsupported. Download it <a src="/videos/WALK_CYCLE.mp4" >here</a>.
+      </video>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> I made this using my mouth. I made popping sounds with my 
+        mouth and this is what it sounds like when I speed them up a little and chop up the time in between so that 
+        it matches the duration of the walk cycle animation. 
+        If you can't make popping sounds with your mouth, I'm sorry, I don't know how to explain how it works. 
+      </p>
+
+      <h3>Kick Swoosh</h3>
+      <video class="medium-y" controls>
+        <source src="/videos/KICK.mp4" type="video/mp4">
+        Video playback unsupported. Download it <a src="/videos/KICK.mp4" >here</a>.
+      </video>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> This is a recording of me swinging my notebook. The air hits my 
+        laptop microphone and causes vibrations like this. Just make sure to swing lightly, because the direct 
+        impact of the wing on the microphone is *very* loud, to the point it clips out! The crunchiness comes 
+        from the wobbling of the notebook as I swung it. (It's made of many layers of paper, so it doesn't sound flimsy.)
+      </p>
+
+      <h3>Pick Up Rocks & Rock Impact</h3>
+      <video class="medium-y" controls>
+        <source src="/videos/GRAB_AND_IMPACT.mp4" type="video/mp4">
+        Video playback unsupported. Download it <a src="/videos/GRAB_AND_IMPACT.mp4" >here</a>.
+      </video>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> The first sound in that video is the Pick Up Rocks sound. This is probably unexpected, but I 
+        made it by dropping two markers in their plastic box. I dropped them lightly, and then they bumped into each other, rolled around a little, 
+        creating that effect of multiple rocks banging against each other. I increased the pitch using <a target="_blank" rel="noopener" href="https://www.audacityteam.org/">Audacity</a> so it sounded lighter, since I'm picking things <i>up</i>.
+      </p>
+      <img class="medium-y" src="/images/plastic_colored_markers.png"/>
+      <p>The plastic markers I used, lying around in their plastic box</p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> The Rock Impact sound is the one you heard earlier when I kicked the rock. It's made 
+        by me knocking on the back of my phone with my knuckles. Make sure it's in your hands and only held on to by a few fingers, 
+        not on the table, otherwise the sound would be too shallow. Don't knock too hard, and right after you knock on it, keep your knuckles held against it, 
+        so that there won't be any vibrations (since rocks won't vibrate like that.) I lowered the pitch a little to make it sound heavier.
+      </p>
+      <img class="medium-y" src="/images/iPhone_iPhone.png"/>
+      <p>The phone I used taking a photo of the phone I used</p>
+
+      <h3>Dancing Music</h3>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> I never learned music theory, so I just searched online for "Happy Chords". I found a chord progression 
+        of C E G -> E G C -> F A C -> G B D. I tested it out, and it sounded nice when transitioning between any two 
+        of them, so it was good. I have a piano at home, but it's cheap and out of tune, and well, I could just use a software instrument since it sounds cleaner.
+        So I just exported a few chords using the Marimba instrument from Logic. I chose the Marimba because it sounded playful.
+      </p>
+      <video class="medium-y" controls>
+        <source src="/videos/DANCE_PLAYER.mp4" type="video/mp4">
+        Video playback unsupported. Download it <a src="/videos/DANCE_PLAYER.mp4" >here</a>.
+      </video>
+      <p>Player Dance Music</p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> As for the Fuzzks, I just used C -> E -> F -> G, the lowest note in each of the chords,
+        and repeated it once one octave higher. And since the Fuzzk music was going to played when you dance with a Fuzzk, it meant that 
+        they couldn't both be Marimbas, otherwise it would sound messy. I used a bass, so it could act as a background track. The reason why 
+        each dance move has two sounds is to better help the players gauge the time between dance moves.
+      </p>
+      <video class="medium-y" controls>
+        <source src="/videos/DANCE_FUZZK.mp4" type="video/mp4">
+        Video playback unsupported. Download it <a src="/videos/DANCE_FUZZK.mp4" >here</a>.
+      </video>
+      <p>Fuzzk Dance Music</p>
+
+      <h2><a id="Save" href="#Save">Saving System</a></h2>
+      <h3><a id="Save_Concept" href="#Save_Concept">Concept</a></h3>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> I want the save system to be natural and persistent, because it's a game about living. If things like rocks get 
+        reset every time you re-load the game, it would feel very much like a video game and not like a simulated world. However, instead of constantly autosaving, 
+        I want the player to be able to choose when they save. I haven't found a way in Godot for the game to save on exit, which meant that if the player forgets to save, 
+        they might loose a lot of progress. So, I will tie saving to an in game action that the player is frequently incentivized to do. Taking inspiration from <a target="_blank" rel="noopener" href="https://www.hollowknight.com">Hollow 
+        Knight</a>, where you save by sitting on a bench, which heals you to max HP at the same time, I made it so that the game saves when you sleep. (When you sleep in Frabjous Fuzzk, 
+        you also heal!)
+      </p>
+      <img class="medium-y" src="/images/no-copyright/hollow_knight_sleep_comparison.png"/>
+      <p>Resting/healing save systems in Hollow Knight and in Frabjous Fuzzk</p>
+      <h3><a id="Save_Tech" href="#Save_Tech">Technical Implementation</a></h3>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> For every node that I want to save, I first put it into the "Persist" group, and then 
+        I write a <span class="monospaceFont"> save() -> Dictionary </span> function that outputs a dictionary containing all the data I want to save. I then pass it on to the 
+        GameManager which labels each dictionary with the path of the node it belongs to, and combines all the dictionaries into one 
+        nested dictionary like this:
+      </p>
+      <p class="monospaceFont"> 
+        {"NODE_PATH" : {"VARIABLE_NAME": VALUE, ...}, ... }
+      </p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> I then store the variable into a binary file. All I have to do when 
+        loading is to read the file, and go to the path of each node and assign the node data using each <span class="monospaceFont">"Persist"</span> node's  <span class="monospaceFont"> load(data: Dictionary) -> void </span> 
+        function. 
+        <br><br>
+      </p>
+      <img class="xx-large-x" src="/images/save_system_flowchart.png"/>
+      <p>Save System Flowchart</p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> However, there are some data that needs to be handled separately after loading, such as the Fuzzks' <span class="monospaceFont">follow_target: Area2D</span> when they are in the follow state. I cannot store references to nodes since they are essentially memory addresses, 
+        and so they would be completely different when you exit and re-open the game. Instead, I had to save an <span class="monospaceFont">is_following_player: bool</span> and then, in <span class="monospaceFont"> load(data: Dictionary)</span>, 
+        manually assign the follow_target to the player node 
+        that I search for in the scene tree by using <span class="monospaceFont">get_tree().get_first_node_in_group("Player") -> Node</span>.
+        <br><br>
+        <span class="tabspace"></span> Additionally, for objects that used to be spawned in after the game starts, and therefore do not exist in the scene true on <span class="monospaceFont">_ready()</span>, 
+        such as the Rocks, I had to store their data in <span class="monospaceFont">SpawnManager</span>. That meant I had to emit a signal when calling <span class="monospaceFont">save()</span> for <span class="monospaceFont">SpawnManager</span>
+        to tell the Rocks to update their position to the <span class="monospaceFont">SpawnManager</span> before the <span class="monospaceFont">Array[Vector2]</span> is saved into the dictionary. When loading, instead of allowing 
+        <span class="monospaceFont">SpawnManager</span> to spawn rocks at random locations, it instead spawns a Rock at each saved position.
+        <br><br>
+        <span class="tabspace"></span> One thing to note is that the save system could cause a lot of bugs due to the order that the methods are called. The exact sequence is undetermined, so some times, the <span class="monospaceFont">load(data: Dictionary)</span> function 
+        is called *before* <span class="monospaceFont">_ready()</span>, which means loaded data could be overwritten by initializations written in <span class="monospaceFont">_ready()</span>. Also, if you used Finite-State Machines, make sure they are 
+        capable of from any state without having to be initialized to the <span class="monospaceFont">REST</span> or <span class="monospaceFont">IDLE</span> state. Which is to say, write <span class="monospaceFont">_to_state()</span> functions 
+        rather than handling state transitions within other states.
+      </p>
+
+      <h3><a id="Save_Choice" href="#Save_Choice">JSON or Binary?</a></h3>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> When you search online for saving data in Godot, most of what you'll come across teaches you to 
+        store data in a .JSON file. While this is indeed very useful for if you want to modify save files, and allows you to debug the save system
+        by just directly inspecting the files, it is very limited in the types of data it can store. Basically, it only stores simple variable 
+        types like int, float, bool, and String. For Vector2, you must store the x and y values separately, and then combine them when loading data. 
+        So instead, I found out about Godot's ability to serialize variables into binary files. The functionality is included in the 
+        <a target="_blank" rel="noopener" href="https://docs.godotengine.org/en/stable/classes/class_fileaccess.html#class-fileaccess-method-store-var">Godot FileAccess class</a>.
+        <br><br>
+        <span class="tabspace"></span> I think an added benefit is that the save files can have a much smaller size, because you no longer have to waste bytes on 
+        conforming to the JSON format. However, I didn't test it, so I can't be sure if there's a noticeable difference, since binary serialization requires extra bytes to encode  
+        the length of data otherwise you won't be able to read the data correctly.
+      </p>
+
+      <div class="footer">
+        <a style="flex: 1;" href="/pages/devlogs/FrabjousFuzzk/2025-07-18.html"> PREV </a>
+        <span style="width: 100%;""></span>
+        <a style="flex: 1; margin-right: 2em;" href="/pages/devlogs/FrabjousFuzzk/2025-07-20.html"> NEXT </a>
+      </div>
+    </div>
+
+    <audio id="music" src="/music/no-copyright/whirling_in_rags_8am.mp3" loop></audio>
+    <script src="/scripts/looping-bg-music.js"></script>
+
+  </body>
+
+</html>

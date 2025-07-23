@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devlog #12</title>
+    <link href="/styles/main-style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+
+  <body class="background" style="background-image: url('/images/backgrounds/apple_park_vincinity.png');">
+
+    <div class="header blur">
+      <a href="/" class="header-link"> Lucas Hsu </a>
+      <a href="/home.html" class="header-link"> Home </a>
+      <a href="/pages/devlogs/" class="header-link"> Devlogs </a>
+      <a href="/pages/devlogs/FrabjousFuzzk/" class="header-link"> Frabjous Fuzzk </a>
+    </div>
+    
+    <div class="content blurier"> 
+      <div style="margin-top: 1em;"></div>
+      <div style="display: flex; align-items: center;">
+        <div id="musicImg" class="circle-container small reactive" style="border: 10px solid #b57cbd">
+          <img class="small circle" src="/images/no-copyright/bl3.png">
+        </div>
+        <h1 style="flex:1; padding-left: 1em;"><a href="/pages/devlogs/FrabjousFuzzk/2025-07-22.html" class="center-content".html">Frabjous Fuzzk - Devlog #12</a></h1>
+      </div>
+      <div style="height: 0.5em;"></div>
+
+      <h2><a id="User" href="#User">User Feedback</a></h2>
+      <h3><a id="User_Shells" href="#User_Shells">Head Shellders Knees and Toes</a></h3>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> Today, I let my sister play the game for two hours, to look for bugs and ask for her detailed feedback on the game. She acts as a 
+        sample audience from the casual gamers, since she never plays video games on a computer. As expected, she thought the game was difficult. However, some of the feedback 
+        she gave was indeed helpful, and many which I have gradually begun to implement. 
+        <br><br>
+        <span class="tabspace"></span> She told me that the typing mini-game was difficult for her, so she didn't want to try it anymore. I told her that practice makes perfect, 
+        which is indeed what I wanted the game to be like. However, she told me that there is no incentive to practice, when there is an equally valid way to gain XP, and that is 
+        hunting Toes. This means that the reward I set for successfully hunting shells is too low due to the risk factor. In other words, the reward for hunting shells is too low if 
+        you are bad at typing, because it takes too much effort. In contrast, Toes get stunned easily when you throw rocks at them, which leaves them vulnerable to further attacks without 
+        pressure on the player. This meant that although Toes gave less XP than shells, she could actually gain XP faster if she focused on hunting Toes rather than interacting with the 
+        main focus of the game, the Shells. 
+        <br><br>
+        <span class="tabspace"></span> My designed solution was split into three parts: Incentive adjustment, Difficulty tweaking, and Player Nudging. 
+        <br><br>
+        <span class="tabspace"></span> <b>Incentive</b>: I reduced the XP reward for killing Toes and increased the reward for hunting Shells so that there is roughly 
+        a 1:5 ratio between the rewards. A swarm of Toes is usually 3~6 Toes, so killing a group of Toes would result in roughly the same reward to hunting one Shell. 
+        In reality, hunting shells would take half as long, but the initial difficulty in getting used to the typing game would balance things out. 
+        <br><br>
+        <span class="tabspace"></span>  Now, success in hunting 
+        would be a greater reward, which incentivizes new players to take the risk. However, adjusting the quantitative rewards is not enough, since players will still more often 
+        choose the easiest solution rather than the most efficient solution. (We are talking about casual gamers here. Advanced players would optimize for efficiency in time rather than 
+        skill because they already have the high skill to handle difficult tasks.) That's why, tweaking the difficulty is necessary.
+        <br><br>
+        <span class="tabspace"></span> <b>Difficulty</b>: I made the choice probably unexpected: Instead of reducing the difficult of hunting Shells, I increased the difficulty 
+        of killing Toes. Toes are now take more hits to kill, which means they have more opportunity to attack you and heal themselves. It also means they will be, on a whole, a lot
+        more difficult in swarms, as the number of Toes would not drop until much longer than before, which meant players would have to think harder to try and single out Toes to fight. 
+        Also, I've made it so that Toes can now run away from you faster than your maximum movement speed, which means you can no longer mindlessly chase the Toes and kill them. Instead, you will 
+        have to use your environment and throw rocks to stun them before they get away, otherwise you won't be getting the XP points.
+        <br><br>
+        <span class="tabspace"></span> The reason I made this decision is because I do not want to compromise the chance to give players a sense of accomplishment when they finally improve their skill. If everything is 
+        too easy, even though players might think it's better that way, it actually makes the game less interesting. In my opinion, difficulty is the biggest thing that separates video games from 
+        other mediums, which means that in Games, not only do the game characters undergo a transformation, by the end of the game, the player has also gone through changes because of the 
+        challenge they faced and their journey in overcoming it. Now, with it being harder to fight Toes too, players would feel uneasy when playing the game. It makes them more desperate to adapt 
+        to the difficult environment, which in term pushes them to improve on things they never would have bothered to try.   
+      </p>
+      <video class="medium-y" controls>
+        <source src="/videos/Toes_Attack_Shells.mp4" type="video/mp4">
+        Video playback unsupported. Download it here <a src="/videos/Toes_Attack_Shells.mp4" >here</a>.
+      </video>  
+      <p style="text-align: center;">A Shell being bullied by the three Toes</p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> <b>Nudging</b>: The effect of this is unknown, as it's something that is very subtle. I increase the max stamina points for shells so that they can survive longer 
+        when being stung by Toes. (Players are not incentivized to kill Shells, because only successfully hunting them would reward XP. That is to say, the carcass of a Shell is useless). So, players would be 
+        more likely to observe Toes attacking Shells in the wild. It should be noted that Shells do not fight back, and instead start running away when their health is low.
+        <br><br>
+        <span class="tabspace"></span> I believe this sets an example to the players, and shows them that Shells occupy the prey position, on the botto of the the foodchain, which would reduce the level of 
+        apprehension players have when trying to hunt Shells. However, I admit, it is also possible that if the players view the Shells as cute, they might feel rage and the need to avenge for the Shells, 
+        instead directing them to attack the Toes in order to "save" the Shells.
+      </p>
+
+      <h3><a id="User_Jack" href="#User_Jack">Jack acts like a car jack, supporting the weight of the difficulty of the game for players with less skill</a></h3>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> You might recall <a target="_blank" href="/pages/devlogs/FrabjousFuzzk/2025-07-15.html#Jack">Golden Jack</a> from the art devlog a few days ago. I used it as practice for 
+        drawing art, but I also secretly added it into the game as a <i>super weapon</i>. It's a rock that can kill Toes and Shells in one hit. I hid it in one of the dark corners of the world. The reason that I originally wanted 
+        Jack to directly kill Shells is because I wanted to punish players from choosing the easy way out, so I made it so that they would feel bad when they kill Shells using Jack, since a Shell carcass is both useless and pitiful.  
+        <br><br>
+        <span class="tabspace"></span> Now, after hearing what my sister thought of Jack, I made it so that Jack stuns Shells instead of killing them directly. This way, it can give players a chance to improve their hunting-mini game skills without the risk of not being able to 
+        catch shells. It's a compromise, because I still think the fun part of the game is finding out ways to trap the Shell and then chase after it, eventually stunning it so you can hunt it. However, this at least 
+        gives players a chance to choose how they want to approach the game. And if they really don't want to bother, they could just farm XP points by endlessly killing Toes with it and fighting the Fuzzks and Final Boss 
+        with hundred of stamina points. I guess it's a valid way to play the game too. I don't want to control the players too much. 
+      </p>
+
+      <div style="display: flex; flex-direction: row;">
+        <div style="display: flex; flex-direction: column;">
+          <video class="medium-y" controls>
+            <source src="/videos/Jack_instakill.mp4" type="video/mp4">
+            Video playback unsupported. Download it here <a src="/videos/Jack_instakill.mp4" >here</a>.
+          </video>
+          <p style="text-align: center;">Jack kills Toes instantly</p>
+        </div>
+        <span class="tabspace"></span>
+        <div style="display: flex; flex-direction: column;">
+          <video class="medium-y" controls>
+            <source src="/videos/Jack_stun_shells.mp4" type="video/mp4">
+            Video playback unsupported. Download it here <a src="/videos/Jack_stun_shells.mp4" >here</a>.
+          </video>
+          <p style="text-align: center;">Jack stuns Shells for longer</p>
+        </div>
+      </div>
+
+      <h3><a id="User_Fuzzks" href="#User_Fuzzks"> What the Fuzzk?</a></h3>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> One thing that I regret is not spending more time on developing the Fuzzks. They really seem useless!
+        I originally wanted each Fuzzk to have a different gimmick that you had to solve in order to befreind them, for example planting flowers, 
+        running race, and dancing was just one of those. However, it really would take too much time, so Fuzzk have kind of been bland and boring, 
+        especially because I also did not implement the speech system that would introduce much needed different personalities for each Fuzzk. In any case,
+        it really seemed like the Fuzzks were just an artificial challenge, and only forced into being useful in the final bossfight.
+        <br><br>
+        <span class="tabspace"></span> My sister told me that she thought the Fuzzks were cute, and that it was really fun seeing them spin in circles around 
+        you, but she felt like they were more like <i>accessories</i> than your brothers. That's right! The Fuzzks were not useful, and they just seemed to float around, minding 
+        their own business like they weren't even following you. That's why I introduced a few small changes to the Fuzzks.
+      </p>
+
+      <video class="medium-y" controls>
+        <source src="/videos/Group_Dancing.mp4" type="video/mp4">
+        Video playback unsupported. Download it here <a src="/videos/Group_Dancing.mp4" >here</a>.
+      </video>
+      <p style="text-align: center;">Dancing in synch!</p>
+
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> So, the first thing I did was to make the Fuzzks that are following you imitate your dance moves. This small change was very effective. 
+        It formed a sense of unity between the Fuzzks and the player. I think it's commonly believed that imitation and reciprocity in behavior is a vital component of social interactions, 
+        and acts as a glue that pulls humans together. I am exploiting that nature through this. Now, players would feel a closer much relationship to these Fuzzks, and between Fuzzks.
+      </p>
+
+      <video class="medium-y" controls>
+        <source src="/videos/fuzzks_attack_toes.mp4" type="video/mp4">
+        Video playback unsupported. Download it here <a src="/videos/fuzzks_attack_toes.mp4" >here</a>.
+      </video>
+      <p style="text-align: center;">No Fuzzk, no muss!</p>
+
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> You can now kick the Fuzzks, and the kicked Fuzzks would damage any enemies that they bump into. It's sort of an extension of your kick, 
+        which my sister has complained being too difficult to use due to the limited range and high requirement of precision. Kicking Fuzzks, which have a larger 
+        collision shape, and letting them attack you enemies is much easier. In the video above, you can see that it led to me defeating multiple Toes in one kick! This also 
+        means you can finally use the Fuzzks in the boss battle now. If you run out of rocks, just kick the Fuzzks toward the boss. This fixes the problem of kick being under-utilized as 
+        well as increase the usefulness of Fuzzks and befriending more Fuzzk, since with higher number of Fuzzks following you, you are able to more frequently kick a Fuzzk towards a desired direction.
+        However, I'm still considering whether it would make the game too easy. In any case, it incentivizes players to interact with the core game systems that was once neglected, so I think 
+        it's fine for now. I will decrease the damage (right now it's 2 stamina points per hit) and kick range (as you can see, it's very far) if necessary. 
+      </p>
+
+      <video class="medium-y" controls>
+        <source src="/videos/fuzzks_stun_shells.mp4" type="video/mp4">
+        Video playback unsupported. Download it here <a src="/videos/fuzzks_stun_shells.mp4" >here</a>.
+      </video>
+      <p style="text-align: center;">A Shell escaping from the Ring of Fuzzks</p>
+
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> Related, you can also stun Shells if you kick Fuzzks towards them. Now it's much easier to hunt Shells, as you basically have a high-range attack that can 
+        hit the shell beyond the distance that would activate its escape. They can actually stun Shells even when not kicked, which means that if you are in proximity of a Shell, it's very unlikely
+        for it to escape, if you have 5 Fuzzks following you, which are in turn surrounding it. This might be problematic and take away focus from throwing rocks, but I'll have to playtest it more, and ask for more 
+        people's opinions first. It's fun, that's for sure!
+        <br><br>
+        <span class="tabspace"></span> Also related to Shells, I want the Fuzzks to be able to help you in hunting. My vision is that when you nearly fail a hunt, there will be a probability, and that probability will 
+        increase as you befriend more Fuzzks, that a Fuzzk would come in and hit the Fuzzk a few times, effectively extending the time you have to complete the hunting mini-game. I think it might take longer to implement 
+        due to the way I coded the hunting mini-game separate from the Overworld, so I haven't done it yet. But it really seems like a good idea to add that, because it would be the last step in 
+        fully integrating Fuzzks into the core gameplay loop, and justifies spending so much time defeating them in the very challenging dance battles.
+      </p>
+
+      <h2><a id="Release" href="#Release">Nearing Release</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> I'm going to complete as much as I can tomorrow, and then release it on <a target="_blank" rel="noopener" href="https://lucashsu.itch.io">Itch.io</a> tomorrow so that I can start getting more player feedback. Also, it means I can start 
+        doing my homework instead of working on the game. I've added this picture at the end of the bossfight instead of making a end cutscene, because it'll really just be an early access version of the game:
+      </p>
+
+      <img class="x-large-y" src="/images/Frabjous Fuzzk Early Access.png"/>
+
+      <div class="footer">
+        <a style="flex: 1;" href="/pages/devlogs/FrabjousFuzzk/2025-07-21.html"> PREV </a>
+        <span style="width: 100%;""></span>
+        <a style="flex: 1; margin-right: 2em;" href="/pages/devlogs/FrabjousFuzzk/2025-07-23.html"> NEXT </a>
+      </div>
+    </div>
+
+    <audio id="music" src="/music/no-copyright/supernova_dreamsicle.mp3" loop></audio>
+    <script src="/scripts/looping-bg-music.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devlog #10</title>
+    <link href="/styles/main-style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+
+  <body class="background" style="background-image: url('/images/backgrounds/apple_park_vincinity.png');">
+
+    <div class="header blur">
+      <a href="/" class="header-link"> Lucas Hsu </a>
+      <a href="/home.html" class="header-link"> Home </a>
+      <a href="/pages/devlogs/" class="header-link"> Devlogs </a>
+      <a href="/pages/devlogs/FrabjousFuzzk/" class="header-link"> Frabjous Fuzzk </a>
+    </div>
+    
+    <div class="content blurier"> 
+      <div style="margin-top: 1em;"></div>
+      <div style="display: flex; align-items: center;">
+        <div id="musicImg" class="circle-container small reactive" style="border: 10px solid #2c3e50;">
+          <img class="small circle" src="/images/rubber_band_band.png">
+        </div>
+        <h1 style="flex:1; padding-left: 1em;"><a href="/pages/devlogs/FrabjousFuzzk/2025-07-20.html" class="center-content".html">Frabjous Fuzzk - Devlog #10</a></h1>
+      </div>
+      <div style="height: 0.5em;"></div>
+
+      <h2><a id="Overtime" href="#Overtime">Already Overtime</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> I have gone past the seven day development timeline that I had planned, since
+        have not added the final boss and win criteria to the game. Looking back at my original success criteria, here are the ones 
+        I have not completed: 
+      </p>
+
+      <ul>
+        <li>NPCs
+          <ul>
+            <li>
+              4. Scary Monster in the cave.
+            </li>
+          </ul>
+        </li>
+        <li>Player Actions (Hunt Mode)
+          <ul>
+            <li>
+              3. Inject venom, which is a minigame like Space Invaders, but in the shape of living cells
+            </li>
+          </ul>
+        </li>
+        <li>
+          Game Objectives 
+          <ul>
+            <li>
+              2. You need all 5 Fuzzks on your team to make the scary monster bossfight not ridiculously difficult. <br>
+            </li>
+            <li>
+              3. If you beat the scary monster, you win.
+            </li>
+          </ul>          
+        </li>
+        <li>Bonus
+          <ul>
+            <li>
+              1. Grass and flowers
+            </li>
+            <li>
+              2. Non-essential sound effects
+            </li>
+            <li>
+              3. Particle effects, wind, and other graphical details
+            </li>
+            <li>
+              4.Rivers and jumping across rivers
+            </li>
+            <li>
+              5. Day and nights / time system, so that the world feels more alive. Prey is asleep at night, but visibility is lower
+            </li>
+            <li>
+              6.Speech system for Fuzzks, so they can have different personalities
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> As you can see, I've completed nearly all of the criteria. As mentioned in <a target="_blank" href="/pages/devlogs/FrabjousFuzzk/2025-07-17.html#Change">Change of Plans</a>, I've removed "Space Invaders" from the game 
+         due to new design considerations. There are many things I could add to the game that would make it an even better game, and the things I would prioritize 
+         more if I had time would be the Day/Night cycle for creating a world breathing with life, and the speech system for Fuzzks so that they are more than mere 
+         NPCs, but become your friends. However, that's for Frabjous Fuzzk 2 (Unofficial). 
+         <br><br>
+         <span class="tabspace"></span> My goal tomorrow is to implement the boss battle. Due to my studies and summer program, 
+         I won't have time to draw new art so I'll just make the Scary Monster look like Red Fuzzk. I won't be adding new QOL features, sound effects, or art, into the game until I have a game that can 
+         be fully played from start to finish. That means I'll have to choreograph the Fuzzk dances tomorrow too. 
+      </p>
+
+      <h2><a id="Art" href="#Art">Art</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> I like drawing art a *lot* more, now that I can actually draw decent 
+        things. And I <i>already</i> enjoyed drawing before! But art takes a very long time! That's why I didn't really do much these few days. 
+        <br><br>
+        <span class="tabspace"></span> I let my sister playtest my game for half an hour, and she enjoyed it! However, feedback she gave generally 
+        was centered around how unintuitive the controls were. She didn't like having to hold down buttons while she pressed other buttons on the keyboard.
+        That's why I changed the Dance mode and Sleep action from hold-controls to toggle-controls. However, now it would be weird to new players
+        if you suddenly can't move, so I had to add indicators that displayed if you were in different states. 
+        <br><br>
+        <span class="tabspace"></span> Following my design ideas for the UI, a simple icon would suffice, so instead of using text, I drew these icons:
+      </p>
+      <div style="display: flex; flex-direction: row;">
+        <div style="display: flex; flex-direction: column;">
+          <img class="medium-y" src="/images/music_symbol_color_shifted_bloom.png">
+          <p>Player Dancing Indicator</p>
+        </div>
+        <span class="tabspace"></span>
+        <div style="display: flex; flex-direction: column;">
+          <img class="medium-y" src="/images/sleep_symbol_bloom_cyan.png">
+          <p>Player Sleeping Indicator</p>
+        </div>
+      </div>
+
+      <video class="large-y" controls>
+        <source src="/videos/FuzzkDanceAndSing.mp4" type="video/mp4">
+        Video playback unsupported. Download it here <a src="/videos/FuzzkDanceAndSing.mp4" >here</a>.
+      </video>
+      <p>Cyan Fuzzk enjoys its fun and peaceful life.</p>
+
+      <h2><a id="Beautiful" href="#Beautiful">i hear the echo of a voice, a beautiful song</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> That's right! I composed music for the game! I wasn't planning to, originally, but the 
+        short tune I was making for the sleep/heal sound effect ended up sounding so beautiful that I had to expand it into a one-minute song. 
+        Just like the dance sound effects, I tried by focusing on the "Happy Chord Progression", using combinations of those chords and transitioning 
+        between them. I didn't learn any music theory, but maybe it is not important. What matters the most is to make music that <i>I</i> like to hear. 
+        And I have a few tools already, which meant that I can create music with passion just like any other. Have a listen!
+      </p>
+      <div style="display: flex; flex-direction: column;">
+        <img class="small-y" src="/images/quietoverworld.png"/> 
+        <audio src="/music/ff_quiet_overworld.mp3" controls/>
+      </div>
+      <p>Quiet Overworld / <br> Alt Title: Life of the Rainbows</p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> It reminds me of Blade Runner for some reason. I guess the instruments sound pretty similar. I'm using the "Atmospheric Noise Pad"
+        software instrument. I basically knew I was going to have to make something with it once I discovered it in the library because I loved how calm it sounded, 
+        and now I did!
+        <br><br>
+        <span class="tabspace"></span> Quiet Overworld will loop forever and ever in the overworld, with periods of long silence in between. I think that's how minecraft music 
+        works. It plays no matter what you are doing, and at random intervals. It's good in the background, when you are busy with something else, and sometimes, you forget it 
+        exists when you are running around the world, but it's always there, sometimes. But some other times, you can take a rest, and listen to the music fully, in your rock house, 
+        watching the mobs roam around outside. You can do that now im my game too. 
+      </p>
+      <h2><a id="However" href="#However">the flames danced and my pulsating heart followed along</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> That's not all! Taking a complete 180° turn, I also composed a fast-paced song for when you are hunting Shells. It's meant to make you feel 
+        confident and react quickly, so that you feel cool when you play (and succeed at) that typing mini-game. It's exactly thirty seconds long, because that's the maximum duration 
+        of the hunting mini-game. Have a listen too! (Volume Warning)
+      </p>
+      <div style="display: flex; flex-direction: column;">
+        <img class="small-y" src="/images/exhilaratinghunt.png"/> 
+        <audio src="/music/ff_exhilarating_hunt.mp3" controls/>
+      </div>
+      <p>Exhilarating Hunt / <br> Alt Title: Attack Ballad</p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> It's not at all a slow and sentimental song, and absolutely not traditional folklore, but the Ballad Piano is the instrument I used, and I felt no other 
+        piano in Logic could capture the feeling I wanted for the music. I think this music might be better for a bossfight or something because of how exciting it sounds. However, 
+        it won't be fit for the bossfight in my game, because I want the boss to be scary and opposing, and the music too should make you feel oppressed, as opposed to the 
+        rest of the game. So I'll keep it as the hunting song. 
+        <br><br>
+        <span class="tabspace"></span> Funny thing, now I actually prevent myself from beating the hunting mini-game too fast just because I want to hear the 
+        full song! It's awesome, because that's exactly the feeling I wanted to replicate! Predators like cats (or tigers? I think?) have been observed to play with their prey before they 
+        eat it. I like to think of this as the same. It shows that you have high enough skills because you can dance around the edge of letting your prey escape, before securing the kill!
+        <br><br>
+        <span class="tabspace"></span> You might wonder how I made this very complex-sounding piece of music. Well, I didn't actually use any music skills. I just opened up the piano tile editor, 
+        and drew lots of shapes and beautiful graphs with different colors, and it sounded very nice, so I kept going in the same direction. Take a look at the piece looked like when I just realized 
+        how nice the bunch of lines sounds: 
+      </p>
+      <img class="medium-y" src="/images/ExhilaratingHunt_1.jpeg">
+      <p>Exponential curve, sine waves, vines, and a red flower</p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> In a way, I'm making music by drawing. I'm combining the different arts! But of course, it wouldn't sound very nice if you just 
+        directly drew on the "canvas" like that. I made sure that my notes were all within the same key. According to music teachers, notes part of the same scale sound nicer together, and of you play keys outside of the scale, it sounds weird. 
+        I did something similar when I made the News Anchor music in News Clear News. Though, there, I only used keys that belong to a chord, and then added 
+        decorational notes around them. The difference is that I changed a chord for each section, while in Exhilarating Hunt, I stayed in one scale.
+      </p>
+      <div style="display: flex; flex-direction: column;">
+        <img class="small-y" src="/images/newsclearanchor.png"/> 
+        <audio src="/music/News Anchors (ncs1).mp3" controls/>
+      </div>
+      <p>News Clear News: News Anchors</p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> The scale for Exhilarating Hunt is called the Natural Minor (Aeolian) in C. There is no specific 
+        music reason I chose this. I only picked it because it's "natural". I wish I researched it before I started making the music, because now searching the internet, I find that people say it sounds pensive,
+        or sombre. That's the opposite of what I want for this song. But it still sounds nice, and I don't think it sounds sad, so maybe the music theory is not a very strict rule. I guess it's the same with 
+        art, since you don't actually have to draw the lighting physically correct for it to look nice. And, if it does sound sad to real musicians, it just adds another layer 
+        to the music, since it is indeed sad that yet another innocent creature will die to satisfy your hunger. So, I think it's fine to not change the scale.
+      </p>
+      
+      <h2><a id="Difficulty" href="#Difficulty">Balancing Difficulty</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> I've played this game a lot, and now it's very easy for me. So, I increased the difficulty. I want players to slowly learn and improve at playing the game 
+        before they can be comforatble in this cozy game, which is why the game has to be, at the very least, not easy. I increased the number of keys 
+        you have to press correctly before you can devour the Shell, but did not increase the amount of wrong keys you can press before it escapes. Also, I reduced the stun 
+        duration of the Shells. Toes were complex enough to fight against already, so I didn't modify them.
+      </p>
+
+      <div class="footer">
+        <a style="flex: 1;" href="/pages/devlogs/FrabjousFuzzk/2025-07-19.html"> PREV </a>
+        <span style="width: 100%;""></span>
+        <a style="flex: 1; margin-right: 2em;" href="/pages/devlogs/FrabjousFuzzk/2025-07-21.html"> NEXT </a>
+      </div>
+    </div>
+
+    <audio id="music" src="/music/rubber_band_band.mp3"></audio>
+    <script src="/scripts/oneshot-bg-music.js"></script>
+
+  </body>
+
+</html>

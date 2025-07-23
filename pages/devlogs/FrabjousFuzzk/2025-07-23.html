@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devlog #13</title>
+    <link href="/styles/main-style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+
+  <body class="background" style="background-image: url('/images/backgrounds/apple_park_vincinity.png');">
+
+    <div class="header blur">
+      <a href="/" class="header-link"> Lucas Hsu </a>
+      <a href="/home.html" class="header-link"> Home </a>
+      <a href="/pages/devlogs/" class="header-link"> Devlogs </a>
+      <a href="/pages/devlogs/FrabjousFuzzk/" class="header-link"> Frabjous Fuzzk </a>
+    </div>
+    
+    <div class="content blurier"> 
+      <div style="margin-top: 1em;"></div>
+      <div style="display: flex; align-items: center;">
+        <div id="musicImg" class="circle-container small reactive" style="border: 10px solid #b57cbd">
+          <img class="small circle" src="/images/no-copyright/p3_soundtrack_disk2.png">
+        </div>
+        <h1 style="flex:1; padding-left: 1em;"><a href="/pages/devlogs/FrabjousFuzzk/2025-07-23.html" class="center-content".html">Frabjous Fuzzk - Devlog #13</a></h1>
+      </div>
+      <div style="height: 0.5em;"></div>
+
+      <h2><a id="EA" href="#EA">Early Access Release</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> Finally! You can now play my game at <a target="_blank" rel="noopener" href="https://lucashsu.itch.io/frabjous-fuzzk-beta">lucashsu.itch.io/frabjous-fuzzk-beta</a>. Please comment 
+        feedback or ask questions there so I can improve my game through user feedback! I hope you enjoy Frabjous Fuzzk!
+      </p>
+
+      <h2><a id="Add" href="#Add">Things I Added</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> I added a custom cursor to make it more clear when you are able to select objects. I also drew some simple art for the bossfight. 
+        And finally, I added the fuzzks helping you in hunt mode feature. I'm calling it Hunt Assist.
+      </p>
+      <video class="medium-y" controls>
+        <source src="/videos/Fuzzk_Help_Hunt.mp4" type="video/mp4">
+        Video playback unsupported. Download it here <a src="/videos/Fuzzk_Help_Hunt.mp4" >here</a>.
+      </video>  
+      <p style="text-align: center;">More Fuzzks means easier hunting</p>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> Now, the more Fuzzks you have following you, the more likely that Fuzzks 
+        will help attack the Shells for you in hunt mode. This is very helpful as it makes the hunting mini-game more lenient as you get more and more Fuzzks. 
+        This helps tie my game systems together, since hunting Shells levels you up which makes dance battles easier, and winning dance battles makes more Fuzzks 
+        follow you which makes hunting easier. This also works in the bossfight, but since the boss progressively eats your Fuzzks, it gets harder and harder, introducing a
+        a new and reasonable layer of difficulty.
+      </p>
+
+      <h2><a id="Bugs" href="#Bugs">Bugs</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> Throughout the devlogs, I never really focused on the bugs, because they were less interesting than the new features. And really, there is 
+        not much point in focusing on them, because usually it'd just be a dumb mistake. But if you're making a game and worrying about the bugs you have, don't! Everyone makes mistakes,
+        whether it be silly, ignorant, careless, or naive. There's been countless bugs in my game, and I think, over half the time I spent on coding was spent on debugging. The most annoying 
+        issues were often due to some line of code that I wrote a long time ago that was logically incorrect, but it was just one line of code, which made it easy to overlook. Compiler warnings 
+        and runtime errors are much easier to fix. 
+        <br><br>
+        <span class="tabspace"></span> One thing that helps with reducing logical errors that cause those hard-to-detect bugs is to plan things out first. Just like how I drew the Finite-State Machine 
+        for the Toes on paper before I started coding. It allows you to think through the whole thing before starting, so that you don't need to change implementation method midway, which would likely introduce 
+        errors due to conflicting ideas. 
+        <br><br> 
+        <span class="tabspace"></span> I didn't do this, but I think it would have been really helpful if I wrote comments in my code. Comments that explain *why* I am doing it this way instead of that, 
+        so if I ever want to refactor the code, I can make an informed decision, instead of being too afraid to delete code since you are unsure why that code was necessary before. 
+      </p>
+
+      <h2><a id="Future" href="#Future">Future</a></h2>
+      <p class="proportionalFont"> 
+        <span class="tabspace"></span> For now, I'm going to take a break from development, wait for user feedback to come in, and focus on my summer homework and 
+        summer program. I'll continue to update this website when I have time, so check back once in a while!
+      </p>
+
+      <div class="footer">
+        <a style="flex: 1;" href="/pages/devlogs/FrabjousFuzzk/2025-07-22.html"> PREV </a>
+        <span style="width: 100%;""></span>
+        <a style="flex: 1; margin-right: 2em;" href="/pages/devlogs/FrabjousFuzzk/2025-07-10.html"> NEXT </a>
+      </div>
+    </div>
+
+    <audio id="music" src="/music/no-copyright/blues-of-the-soul.mp3" loop></audio>
+    <script src="/scripts/looping-bg-music.js"></script>
+
+  </body>
+
+</html>
