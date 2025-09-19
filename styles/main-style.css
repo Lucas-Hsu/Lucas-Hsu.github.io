@@ -1,10 +1,41 @@
-/* Fonts */
 @font-face {
-  font-family: 'Legible';
-  src: url('/fonts/Lucaslegiblefont-Regular.ttf') format('truetype');
+  font-family: 'LucasLegible';
+  src: url('/fonts/LucasLegible/Lucaslegiblefont-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'LucasLegible';
+  src: url('/fonts/LucasLegible/Lucaslegiblefont-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LucasLegible';
+  src: url('/fonts/LucasLegible/Lucaslegiblefont-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'LucasLegible';
+  src: url('/fonts/LucasLegible/Lucaslegiblefont-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+.font-LL {
+  font-family: 'LucasLegible', sans-serif;
+}
+.font-LL b {
+  font-weight: bold;
+}
+.font-LL i {
+  font-style: italic;
+}
+.font-LL b i, .font-LL i b {
+  font-weight: bold;
+  font-style: italic;
+}
+
 @font-face {
   font-family: 'Timez';
   src: url('/fonts/Timesnewlucas-Regular.ttf') format('truetype');
@@ -18,6 +49,45 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'LucasH2000';
+  src: url('/fonts/LucasH2000/LucasH2000-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LucasH2000';
+  src: url('/fonts/LucasH2000/LucasH2000-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LucasH2000';
+  src: url('/fonts/LucasH2000/LucasH2000-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'LucasH2000';
+  src: url('/fonts/LucasH2000/LucasH2000-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+.font-LH2 {
+  font-family: 'LucasH2000', sans-serif;
+}
+.font-LH2 b {
+  font-weight: bold;
+}
+.font-LH2 i {
+  font-style: italic;
+}
+.font-LH2 b i, .font-LH2 i b {
+  font-weight: bold;
+  font-style: italic;
+}
+
+
 body, html {
   margin: 0;
   padding: 0;
@@ -25,8 +95,9 @@ body, html {
   height: 100%;
   display: flex;
   flex-direction: column;
-  font-family: 'Legible', Times, serif;
+  font-family: 'LucasLegible', Times, serif;
   font-size: x-large;
+  background-color: rgb(180, 210, 240);
 }
 
 p {
@@ -166,6 +237,15 @@ ol {
   position: relative;
   overflow: hidden;
 }
+.circle-container-none {
+  border: 10px solid rgb(82, 159, 198);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
 
 .circle {
   clip-path: circle(50%);
@@ -182,12 +262,82 @@ ol {
   height: 100%;
 }
 
-
-
-.reactive:hover {
-  filter: hue-rotate(10deg) contrast(90%) brightness(1.2) saturate(2);
+.background-tiled {
+  background-repeat: repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: auto;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
+
+.reactive-strong:hover {
+  filter: hue-rotate(10deg) contrast(90%) brightness(1.2) saturate(2);
+}
+.reactive:hover {
+  filter: hue-rotate(10deg) contrast(95%) brightness(1.1) saturate(1.2);
+}
+.reactive-dim:hover *:not(.tooltiptext) {
+  filter: hue-rotate(10deg) contrast(95%) brightness(0.9) saturate(0.9);
+  transition: filter 0.5s;
+}
+.reactive-dim *:not(.tooltiptext) {
+  filter: hue-rotate(0) contrast(100%) brightness(1) saturate(1);
+  transition: filter 0.5s;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  background-color: rgba(60, 115, 115, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 4px;
+  width: 8em;
+  position: absolute;
+  z-index: 1;
+  bottom: 20%;
+  left: 75%;
+  transform: translateX(-50%);
+  transform: translateY(50%);
+  
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.tooltip .tooltiptext-bright {
+  background-color: rgba(93, 255, 255, 0.6);
+  color: #003d6e;
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 4px;
+  width: 8em;
+  position: absolute;
+  z-index: 1;
+  bottom: 20%;
+  left: 75%;
+  transform: translateX(-50%);
+  transform: translateY(50%);
+  
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+.tooltip:hover .tooltiptext-bright {
+  opacity: 1;
+}
+
+
+.bluriess{
+  backdrop-filter: blur( 0.12em );
+  -webkit-backdrop-filter: blur( 0.12em );
+}
 .blur {
   backdrop-filter: blur( 0.35em );
   -webkit-backdrop-filter: blur( 0.35em );

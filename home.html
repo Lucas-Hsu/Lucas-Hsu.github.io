@@ -11,18 +11,24 @@
 
     <div class="header blur">
       <a href="/" class="header-link"> Lucas Hsu </a>
-      <a href="/home.html" class="header-link"> Home </a>
     </div>
     
     <div class="content blur"> 
 
-        <div style="height: 1em;"></div>
+        <div style="margin-top: 1em;"></div>
         <div style="display: flex; place-items: center;">
-          <div id="musicImg" class="circle-container-loop small reactive">
-            <img class="small circle" src="/images/tomorrow.jpeg">
+          <div class="tooltip">
+            <div class="tooltiptext-bright blur font-LH2" style="font-size: medium; width: 12em; bottom: 80%; left: -25%; transform: translateX(-50%) translateY(50%);"> 
+              🎵 Serial Experiments Lain (PSX) <br> "Main Theme (Acoustic)"
+            </div>
+            <div id="musicImg" class="circle-container-loop small reactive">
+              <img class="small circle" src="/images/tomorrow.jpeg">
+            </div>
           </div>
-          <h1><a href="/home.html" style="padding-left: 1em;">Homepage</a></h1>
         </div>
+
+          
+          <h1><a href="/home.html" style="padding-left: 1em;">Homepage</a></h1>
         <div style="height: 2em;"></div>
         
         
@@ -33,12 +39,17 @@
 
         <p>
           <span class="tabspace"></span>
+          <i> Since you're here, you might as well learn more <a style="font-size: xx-large;" href="/pages/about.html">About Me</a>.</i><br><br>
+        </p>
+
+        <p>
+          <span class="tabspace"></span>
           <i>You can also try out some of the games I made before at my <a target="_blank" rel="noopener" style="font-size: xx-large;" href="https://lucashsu.itch.io">Itch.io</a> page.</i><br><br>
         </p>
 
     </div>
 
-    <audio id="music" src="/music/no-copyright/lain-psx-main-theme-acoustic.mp3" loop></audio>
+    <audio id="music" src="/music/no-copyright/lain_psx_main_theme_acoustic.mp3" loop></audio>
     <script src="/scripts/looping-bg-music.js"></script>
 
   </body>

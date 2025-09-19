@@ -1,0 +1,22 @@
+alice_mr.png : "Alice: Madness Returns" OST
+aliceII.png : "Through the Looking-Glass, and What Alice Found There" (1982) OST
+bl3.png : "Borderlands 3" Original Game Soundtrack
+deus-ex.png : "Deus Ex" (2000) Soundtrack
+disco_elysium.png : "Disco Elysium" OST
+eight_kinds_of_fun.png : https://8kindsoffun.com/
+hollow_knight_sleep_comparison.png : "Hollow Knight"
+hue.png : "Hue" Official Soundtrack
+lazarus_decay.png : https://shodan.fandom.com/wiki/Lazarus_Dec%CE%BBy?file=Finished_test_4.1.png
+neon_genesis_evangelion.png : Neon Genesis Evangelion II
+nier_automata_fighting.gif : "NieR: Automata"
+nier_automata_hacking.gif : "NieR: Automata"
+p3_soundtrack_disk1.png : PERSONA3 Original Soundtrack Disk 1
+p3_soundtrack_disk2.png : PERSONA3 Original Soundtrack Disk 2
+peri_hacking.jpg : "Peripeteia" / https://store.steampowered.com/app/1437760/Peripeteia/
+pikuniku_kick_comparison.png : "PIKUNIKU"
+pikuniku.png : "PIKUNIKU" Original Soundtrack
+shadow_of_memories.png : "Shadow of Memories"
+six_types_of_difficulty.png : "How Difficulty Turned DOOM into an RPG" / https://www.youtube.com/watch?v=tVJUGoSSuzE
+spongebobs_method.gif : "SpongeBob SquarePants" Season 2 'Artist Unknown'
+the_incredible_machine.png : "The Incredible Machine Mega Pack" (GOG)
+yokus-island-express.png : "Yoku's Island Express" OST
