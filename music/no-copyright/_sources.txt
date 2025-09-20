@@ -14,3 +14,4 @@ the_mountain_village.mp3 : "PIKUNIKU" Original Soundtrack
 toku_taidua_and_the_village.mp3 : "Yoku's Island Express" OST
 vale_of_tears.mp3 : "Alice: Madness Returns" OST
 whirling_in_rags_8am.mp3 : "Disco Elysium" OST
+smt_iii_nocturne_revelation.mp3 : "Shin Megami Tensei III: Nocturne" Original Soundtrack

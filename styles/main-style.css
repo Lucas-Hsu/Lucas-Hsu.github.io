@@ -346,6 +346,14 @@ ol {
   backdrop-filter: blur( 0.7em );
   -webkit-backdrop-filter: blur( 0.7em );
 }
+.blurierier {
+  backdrop-filter: blur( 1.4em );
+  -webkit-backdrop-filter: blur( 1.4em );
+}
+.blurierierier {
+  backdrop-filter: blur( 2.8em );
+  -webkit-backdrop-filter: blur( 2.8em );
+}
 
 .white {
   background-color: rgba(255, 255, 255, 0.5);
