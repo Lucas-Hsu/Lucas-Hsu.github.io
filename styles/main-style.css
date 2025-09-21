@@ -448,13 +448,24 @@ ol {
 }
 
 
-
+.rotating-slower {
+  animation: spin 3.5s linear infinite;
+  box-shadow: 0px 0px 1.12em white, 0px 0px 1.12em white;
+}
 .rotating-slow {
   animation: spin 2s linear infinite;
   box-shadow: 0px 0px 1.12em white, 0px 0px 1.12em white;
 }
 .rotating {
+  animation: spin 1.5s linear infinite;
+  box-shadow: 0px 0px 1.12em white, 0px 0px 1.12em white;
+}
+.rotating-fast {
   animation: spin 0.785s linear infinite;
+  box-shadow: 0px 0px 1.12em white, 0px 0px 1.12em white;
+}
+.rotating-faster {
+  animation: spin 0.325s linear infinite;
   box-shadow: 0px 0px 1.12em white, 0px 0px 1.12em white;
 }
 @keyframes spin {
